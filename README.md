@@ -1,1 +1,1 @@
-# Tutoriat-Proramarea-Algoritmilor
+# Proramarea-Algoritmilor
