@@ -71,7 +71,7 @@ print(a / b, a // b, a % b, a ** b)
 
 ### -Relaționali
 
-< <= > >= == != is in
+< <= > >= == != is/is not   in/not in
 
 print(3 in [1, 2, 3])     # True
 print("a" is "a")         # True (aceeași referință)
