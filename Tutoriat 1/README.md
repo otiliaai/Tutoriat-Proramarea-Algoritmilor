@@ -62,7 +62,7 @@ print(int(b) + 5)        # conversie string -> int
 ### *Afișare*
 ```python
 print("Salut", "Python", sep=" | ", end="!!!\n")
-//print("Tutoariat")
+#print("Tutoariat")
 ```
 
 
@@ -84,9 +84,10 @@ x= input("x= ")  //valoarea cititită este întodeauna un șir de caractere
    ! Pentru a transforma șirurile de caractere citite în valori de alte tipuri primitive se 
 folosesc funcțiile de conversie int(șir), float(șir), complex(șir) sau bool(șir).
 
-
+```python
 n = int(input("Introdu un număr: "))
 print(f"Pătratul lui {n} este {n**2}")
+```
 
 
 ## 5. Operatorii principali
@@ -100,8 +101,10 @@ print(f"Pătratul lui {n} este {n**2}")
 * `%` : Modulo (restul împărțirii)
 * `**` : Exponențiere (ridicare la putere)
 
+```python
 a, b = 7, 2
 print(a / b, a // b, a % b, a ** b)
+```
 
 ### -Relaționali
 
@@ -173,14 +176,32 @@ print(f"5 ^ 3 = {5 ^ 3}")
 print(f"5 << 1 = {5 << 1}")
 ```
 
+### Operatorul condițional
+
+*valoare_daca_true if conditie else valoare_daca_false*
+
+```python
+# Exemplu: Testarea parității unui număr
+x = 7
+
+# Dacă restul împărțirii lui x la 2 este 0, este "par". Altfel, este "impar".
+rezultat = "par" if x % 2 == 0 else "impar"
+```
+
+
 ## 6. Instrucțiuni de control
 ### -Atribuire
+
+```python
 x = 5
 x += 3
 a, b = 1, 2
 a, b = b, a  # interschimbare
+```
 
 ### -Condiționale (if, elif, else)
+
+```python
 x = int(input("x = "))
 if x < 0:
     print("Negativ")
@@ -188,42 +209,61 @@ elif x == 0:
     print("Zero")
 else:
     print("Pozitiv")
+```
 
-
-🔸 Operator ternar:
-
-paritate = "Par" if x % 2 == 0 else "Impar"
 
 ### -Repetiții (while, for)
 
-### -Buclă while
+### *Buclă while*
 
+```python
 n = 123
 s = 0
 while n > 0:
     s += n % 10
     n //= 10
 print("Suma cifrelor =", s)
+```
 
 
-### -Buclă for
-
-for i in range(5):
-    print(i, end=" ")
-
+### *Buclă for*
 
 ### -Range personalizat
 
-for i in range(2, 10, 2):  # start=2, stop=10, pas=2
+```python
+for i in range(2, 10, 2):  # start=2, stop=10, pas=2 - strat inclusiv, stop exclusiv
     print(i)
+```
+
+```python
+# 1. Iterare cu range() - start, stop, step
+print("Numere de la 5 la 1 (descrescător):")
+for i in range(5, 0, -1):
+    print(i, end=" ")
+# Output: 5 4 3 2 1
+
+# 2. Iterare prin elementele unei liste
+lista_culori = ["roșu", "verde", "albastru"]
+print("\n\nCulorile sunt:")
+for culoare in lista_culori:
+    print(f"- {culoare}")
+
+# 3. Iterare prin Dicționar (Chei și Valori)
+note = {"Mate": 9, "Info": 10}
+print("\nNotele:")
+for materie, nota in note.items():
+    print(f"La {materie}: {nota}")
+```
+
 
 ## Alte instrucțiuni utile
 
 continue → sare peste iterația curentă
 break → oprește complet bucla
 else → se execută doar dacă bucla s-a terminat natural
-pass → “placeholder” fără acțiune
+pass → “placeholder” fără acțiune ( nu are niciun efect în program )
 
+```python
 for i in range(10):
     if i == 3:
         continue
@@ -232,8 +272,11 @@ for i in range(10):
     print(i)
 else:
     print("Bucla s-a terminat normal.")
+```
 
-## 7. Funcții și expresii utile pentru începători
+# SIRURI DE CARACTERE 
+
+## 7. Funcții și expresii utile  
 | Funcție | Descriere | Exemplu |
 |----------|------------|----------|
 | `len()` | lungimea unei secvențe | `len("abc") → 3` |
