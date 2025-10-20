@@ -1,22 +1,24 @@
 # 1. Venit și cheltuială
-# Calculați profitul și pierderea pe baza a două valori. Dacă pierderea este negativă, afișați mesaj corespunzător.
+Calculați profitul și pierderea pe baza a două valori. Dacă pierderea este negativă, afișați mesaj corespunzător.
 ```python
 # Input:
 venit = 5000
 cheltuiala = 3500
 # Output:
-# Profit: 1500
-# Raport venit/pierdere: 1.43
+Profit: 1500
+Raport venit/pierdere: 1.43
 ```
 
 # 2. Pătrat, cub și rădăcină
-# Pentru un număr real n, afișați pătratul și cubul acestuia. Dacă n este pozitiv, afișați și rădăcina pătrată.
+Pentru un număr real n, afișați pătratul și cubul acestuia. Dacă n este pozitiv, afișați și rădăcina pătrată.
+```python
 # Input:
 n = 9
 # Output:
-# Pătrat: 81
-# Cub: 729
-# Rădăcină pătrată: 3.0
+Pătrat: 81
+Cub: 729
+Rădăcină pătrată: 3.0
+```
 
 # 3. Șir inversat
 # Citiți un șir de caractere și afișați-l inversat, precum și primele 3 caractere.
