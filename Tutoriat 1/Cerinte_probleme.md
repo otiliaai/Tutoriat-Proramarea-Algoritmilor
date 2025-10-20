@@ -1,12 +1,13 @@
 # 1. Calcul financiar
 Avem două valori: venit și cheltuială. Trebuie să calculăm profitul (diferența dintre venit și cheltuială) 
 și raportul venit/pierdere. Dacă pierderea este negativă, afișați un mesaj corespunzător.
-Input:
+
+## Input:
 ```python
 venit = 5000
 cheltuiala = 3500
 ```
-Output:
+## Output:
 ```python
 Profit: 1500
 Raport venit/pierdere: 1.43
