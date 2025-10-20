@@ -259,8 +259,11 @@ for materie, nota in note.items():
 ## Alte instrucțiuni utile
 
 continue → sare peste iterația curentă
+
 break → oprește complet bucla
+
 else → se execută doar dacă bucla s-a terminat natural
+
 pass → “placeholder” fără acțiune ( nu are niciun efect în program )
 
 ```python
@@ -274,9 +277,63 @@ else:
     print("Bucla s-a terminat normal.")
 ```
 
-# SIRURI DE CARACTERE 
+# 7.SIRURI DE CARACTERE  (str)
 
-## 7. Funcții și expresii utile  
+ Un șir de caractere este o secvență de caractere indexată de la 0, stocată ca un obiect de tipul clasei str.
+
+ 'șir' sau "șir" - **O singură linie** (caracterele newline sunt ignorate)
+
+ ```python
+sir_1 = "Acesta este, de fapt,\nun sir scris\npe o singură linie!"
+
+print(sir_1)
+```
+
+ '''șir''' sau """șir""" - **Mai multe linii** (caracterele newline nu sunt ignorate).
+ 
+ ```python
+sir_2 = """Acesta este
+un sir scris
+pe mai multe linii!"""
+
+print(sir_2)
+```
+
+
+### *!Proprietatea Vitală: Imutabilitatea* 
+Șirurile de caractere sunt imutabile. Aceasta înseamnă că:
+
+-Valoarea unui obiect de tip str nu mai poate fi modificată după crearea sa.
+
+-Nicio metodă din clasa str nu modifică șirul curent; în schimb, metodele creează și returnează un nou șir care conține rezultatul prelucrării.
+
+```python
+#Dacă vrei să transformi un șir în litere mari, trebuie să modifici referința variabilei
+s = "test"
+s.upper() # Metoda creează șirul "TEST", dar variabila s rămâne neschimbată
+print(s)  # Output: test
+
+# Corect: Reatribuirea noii referințe
+s = s.upper() # s primește acum referința noului șir "TEST" 
+print(s)  # Output: TEST
+```
+
+
+### Accesarea și Secționarea (Slicing) String-urilor
+
+Șirurile de caractere sunt secvențe indexate de la **0** și sunt parcurse folosind indici sau intervale (slice-uri).
+
+| Sintaxă | Descriere | Exemplu (`s = "Python"`) | Rezultat |
+| :---: | :---: | :---: | :---: |
+| `s[i]` | Acces prin **indice pozitiv** (de la 0). | `s[0]` | `'P'` |
+| `s[-i]` | Acces prin **indice negativ** (de la -1, de la sfârșit). | `s[-1]` | `'n'` |
+| `s[st:dr]` | **Slice** de la `st` (inclusiv) până la `dr` (**exclusiv**). | `s[1:4]` | `"yth"` |
+| `s[:dr]` | De la început până la `dr` (**exclusiv**). | `s[:2]` | `"Py"` |
+| `s[st:]` | De la `st` (inclusiv) până la sfârșit. | `s[3:]` | `"hon"` |
+| `s[::pas]` | **Slice cu pas**. | `s[::-1]` | `"nohtyP"` |
+
+
+##  Funcții și expresii utile  
 | Funcție | Descriere | Exemplu |
 |----------|------------|----------|
 | `len()` | lungimea unei secvențe | `len("abc") → 3` |
