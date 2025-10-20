@@ -1,17 +1,13 @@
-# Programarea Algoritmilor – Tutorial 1
+# Programarea Algoritmilor – Tutoriat 1
 
 
 ## 1. Introducere în Python
  Ce este Python?
 
--Creat de Guido van Rossum (1991).
-
--Limbaj interpretat, multi-paradigmă (procedural, orientat obiect, funcțional).
-
--Popular pentru simplitate, citibilitate și suport extins de biblioteci.
+Limbaj interpretat, multi-paradigmă (procedural, orientat obiect, funcțional).
 
 
-## Instalare
+### *Instalare*
 
 🔗 [Python.org – Download](https://www.python.org/downloads/)
 
@@ -19,7 +15,7 @@
 ## 2. Tipuri de date fundamentale
 | Tip de date | Clasă internă | Exemple | Descriere |
 |--------------|----------------|-----------|------------|
-| `NoneType` | `NoneType` | `None` | absența unei valori |
+| `NoneType` | `NoneType` | `None` | absența unei valori sau inițializarea unui parametru al unei funcții cu o valoare implicită |
 | `int` | `int` | `5`, `0b101`, `0x1F` | numere întregi |
 | `float` | `float` | `3.14`, `-2.5e3` | numere reale |
 | `complex` | `complex` | `2+3j` | numere complexe |
@@ -30,64 +26,152 @@
 | `set` | `set` | `{1, 2, 3}` | mulțime fără duplicate |
 | `dict` | `dict` | `{"a": 1, "b": 2}` | perechi cheie: valoare |
 
+
+
+### **Tipuri**:
+
+-Tipul NoneType 
+
+-Tipuri numerice: int, float, complex
+
+-Tipul boolean
+
+-Tipuri secvențiale: șiruri de caractere, liste, tupluri
+
+-Tipuri mulțime: set, frozenset
+
+-Tablouri asociative: dict
+
 ## 3. Variabile și conversii
 
-Python nu cere declararea tipului – tipul este determinat dinamic.
+Python nu cere declararea tipului – tipul este determinat dinamic (care poate fi modificat ulterior).
 
 Poți folosi funcțiile type() și id() pentru a inspecta o variabilă.
 
+```python
 a = 10
 b = "10"
 print(type(a), type(b))  # <class 'int'> <class 'str'>
 print(int(b) + 5)        # conversie string -> int
+```
 
 
 
 ## 4. Afișare și citire
-### Afișare
+
+### *Afișare*
+```python
 print("Salut", "Python", sep=" | ", end="!!!\n")
+//print("Tutoariat")
+```
+
+
 
 ### f-strings (format modern)
+```python
 nume = "Ana"
 varsta = 20
 print(f"{nume} are {varsta} ani.")
+```
 
-### Citire
+
+
+### *Citire*
+```python
 x= input("x= ")  //valoarea cititită este întodeauna un șir de caractere
+```
 
-###Pentru a transforma șirurile de caractere citite în valori de alte tipuri primitive se 
-folosesc funcțiile de conversie int(șir), float(șir), complex(șir) sau bool(șir)
+   ! Pentru a transforma șirurile de caractere citite în valori de alte tipuri primitive se 
+folosesc funcțiile de conversie int(șir), float(șir), complex(șir) sau bool(șir).
+
 
 n = int(input("Introdu un număr: "))
 print(f"Pătratul lui {n} este {n**2}")
 
+
 ## 5. Operatorii principali
 ### -Aritmetici
 
-+ - * / // % **
+* `+` : Adunare
+* `-` : Scădere
+* `*` : Înmulțire
+* `/` : Împărțire (rezultat real/float)
+* `//` : Împărțire întreagă (rezultat întreg)
+* `%` : Modulo (restul împărțirii)
+* `**` : Exponențiere (ridicare la putere)
 
 a, b = 7, 2
 print(a / b, a // b, a % b, a ** b)
 
 ### -Relaționali
 
-< <= > >= == != is/is not   in/not in
+* `<` : Mai mic decât
+* `<=` : Mai mic sau egal cu
+* `>` : Mai mare decât
+* `>=` : Mai mare sau egal cu
+* `==` : **Egalitate** (Verifică dacă **valorile** sunt egale)
+* `!=` : Diferit de
+* `is` : **Identitate** (Testează dacă două variabile/expresii sunt identice)
+* `is not` : Identitate negativă (Testează dacă două variabile/expresii **nu** sunt identice)
+* `in` : **Apartenență** (Verifică dacă o valoare există într-o secvență)
+* `not in` : Apartenență negativă (Verifică dacă o valoare nu există într-o secvență)
 
-print(3 in [1, 2, 3])     # True
-print("a" is "a")         # True (aceeași referință)
+```python
+# Verificarea prezenței într-o Listă
+numere = [1, 2, 3]
+print(3 in numere)      # True
+print(5 not in numere)  # True
+
+# Verificarea prezenței într-un Șir de Caractere (String)
+cuvant = "Python"
+print("y" in cuvant)    # True
+print("oana" not in cuvant) # True
+```
 
 ### -Logici
 
-not, and, or
+* `not` (Negație logică). Inversează valoarea booleană (schimbă `True` în `False` și invers).
+* `and` (Conjuncție logică). Returnează `True` doar dacă **ambele** condiții sunt `True`.
+* `or` (Disjuncție logică). Returnează `True` dacă **cel puțin una** dintre condiții este `True`.
 
+```python
 x = 0
 print(not x)  # True (0 e considerat False)
+```
 
 ### -Pe biți
 
-~, &, |, ^, <<, >>
+| Operator | Descriere | Explicație |
+| :------: | :-------: | :---------------: |
+| `~` | **NOT pe biți** | Inversează toți biții (0 devine 1, 1 devine 0). Rezultatul folosește complementul față de doi (va fi negativ). |
+| `&` | **AND pe biți** | Setează bitul la 1 dacă **ambii biți** corespunzători sunt 1. |
+| `\|` | **OR pe biți**  | Setează bitul la 1 dacă **cel puțin unul** dintre biții corespunzători este 1. |
+| `^` | **XOR pe biți** | Setează bitul la 1 dacă biții corespunzători sunt **diferiți**. |
+| `<<` | **Deplasare la stânga** | Decalează biții spre stânga cu $n$ poziții (echivalent cu înmulțirea cu $2^n$). |
+| `>>` | **Deplasare la dreapta** | Decalează biții spre dreapta cu $n$ poziții (echivalent cu împărțirea la $2^n$ și rotunjire în jos). |
 
-print(5 & 3, 5 | 3, 5 ^ 3)
+
+```python
+# Reprezentarea binară (pe 4 biți):
+# 5  este: 0101
+# 3  este: 0011
+
+# 1. AND pe biți (&)
+# 0101 & 0011 = 0001 (1 zecimal)
+print(f"5 & 3 = {5 & 3}")
+
+# 2. OR pe biți (|)
+# 0101 | 0011 = 0111 (7 zecimal)
+print(f"5 | 3 = {5 | 3}")
+
+# 3. XOR pe biți (^)
+# 0101 ^ 0011 = 0110 (6 zecimal)
+print(f"5 ^ 3 = {5 ^ 3}")
+
+# 4. Deplasare la stânga (<<)
+# 5 << 1 (0101 decalat cu 1) = 1010 (10 zecimal)
+print(f"5 << 1 = {5 << 1}")
+```
 
 ## 6. Instrucțiuni de control
 ### -Atribuire
