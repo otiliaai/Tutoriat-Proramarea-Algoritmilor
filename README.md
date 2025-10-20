@@ -1,6 +1,6 @@
 # Proramarea-Algoritmilor
 
-### marti, 16-18
+### marti, 16-18, L.506
 
 📘 [Documentația oficială Python](https://docs.python.org/3/)
 
