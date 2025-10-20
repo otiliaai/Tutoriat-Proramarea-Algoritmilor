@@ -4,25 +4,17 @@
 ## 1. Introducere în Python
  Ce este Python?
 
-Creat de Guido van Rossum (1991).
+-Creat de Guido van Rossum (1991).
 
-Limbaj interpretat, multi-paradigmă (procedural, orientat obiect, funcțional).
+-Limbaj interpretat, multi-paradigmă (procedural, orientat obiect, funcțional).
 
-Popular pentru simplitate, citibilitate și suport extins de biblioteci.
+-Popular pentru simplitate, citibilitate și suport extins de biblioteci.
 
-Documentație oficială: docs.python.org
 
 ## Instalare
 
 🔗 [Python.org – Download](https://www.python.org/downloads/)
 
-💡 IDE-uri recomandate:
-
-PyCharm
-
-VS Code
-
-Jupyter Notebook
 
 ## 2. Tipuri de date fundamentale
 | Tip de date | Clasă internă | Exemple | Descriere |
@@ -50,7 +42,6 @@ print(type(a), type(b))  # <class 'int'> <class 'str'>
 print(int(b) + 5)        # conversie string -> int
 
 
-Regulă: un nume de variabilă trebuie să înceapă cu literă sau _, fără spații sau simboluri.
 
 ## 4. Afișare și citire
 ### Afișare
@@ -62,6 +53,11 @@ varsta = 20
 print(f"{nume} are {varsta} ani.")
 
 ### Citire
+x= input("x= ")  //valoarea cititită este întodeauna un șir de caractere
+
+###Pentru a transforma șirurile de caractere citite în valori de alte tipuri primitive se 
+folosesc funcțiile de conversie int(șir), float(șir), complex(șir) sau bool(șir)
+
 n = int(input("Introdu un număr: "))
 print(f"Pătratul lui {n} este {n**2}")
 
