@@ -14,113 +14,179 @@ Raport venit/pierdere: 1.43
 ```
 
 # 2. Operații matematice
-# Pentru un număr real n, calculați pătratul și cubul. Dacă numărul este pozitiv, afișați și rădăcina pătrată.
-# Input:
+Pentru un număr real n, calculați pătratul și cubul. Dacă numărul este pozitiv, afișați și rădăcina pătrată.
+
+## Input:
+```python
 n = 9
-# Output:
+```
+## Output:
+```python
 Pătrat: 81
 Cub: 729
 Rădăcină pătrată: 3.0
+```
 
 # 3. Manipulare șir
-# Citiți un șir de caractere. Trebuie să afișați șirul inversat și primele 3 caractere ale acestuia.
-# Input:
+Citiți un șir de caractere. Trebuie să afișați șirul inversat și primele 3 caractere ale acestuia.
+
+## Input:
+```python
 s = "Python"
-# Output:
+```
+## Output:
+```python
 Invers: nohtyP
 Primele 3 caractere: Pyt
+```
 
 # 4. Căutare subșir
-# Verificați dacă un subșir apare într-un șir mai lung și afișați toate pozițiile la care începe subșirul, fără suprapunere.
-# Input:
+Verificați dacă un subșir apare într-un șir mai lung și afișați toate pozițiile la care începe subșirul, fără suprapunere.
+
+## Input:
+```python
 text = "abcabca"
 subsir = "abc"
-# Output:
+```
+## Output:
+```python
 Poziții: 0, 3
+```
 
 # 5. Evaluare expresie
-# Calculați valoarea unei expresii de forma x op y. Operatorii valizi sunt: +, -, *, /, %, **. 
-# Rezultatul trebuie afișat cu 3 zecimale. La operator invalid sau împărțire la 0, afișați mesaj de eroare.
-# Input:
+Calculați valoarea unei expresii de forma x op y. Operatorii valizi sunt: +, -, *, /, %, **. 
+Rezultatul trebuie afișat cu 3 zecimale. La operator invalid sau împărțire la 0, afișați mesaj de eroare.
+
+## Input:
+```python
 x, op, y = 5, '/', 2
-# Output:
+```
+
+## Output:
+```python
 5 / 2 = 2.500
+```
 
 # 6. Suma cifrelor și invers
-# Pentru un număr n, determinați suma cifrelor și numărul obținut prin inversarea cifrelor.
-# Input:
+Pentru un număr n, determinați suma cifrelor și numărul obținut prin inversarea cifrelor.
+
+## Input:
+```python
 n = 1234
-# Output:
+```
+## Output:
+```python
 Suma cifrelor: 10
 Invers: 4321
+```
 
 # 7. Palindrom numeric
-# Verificați dacă un număr este palindrom și dacă ultima cifră este pară sau impară.
-# Input:
+Verificați dacă un număr este palindrom și dacă ultima cifră este pară sau impară.
+
+## Input:
+```python
 n = 1221
-# Output:
+```
+## Output:
+```python
 Palindrom: Da
 Ultima cifră: pară
+```
 
 # 8. Înlocuire caractere
-# Înlocuiți toate aparițiile unui caracter vechi cu un caracter nou într-un șir dat.
-# Input:
+Înlocuiți toate aparițiile unui caracter vechi cu un caracter nou într-un șir dat.
+
+## Input:
+```python
 s = "abracadabra"
 vechi = "a"
 nou = "o"
+```
 # Output:
+```python
 Rezultat: obrocodobro
+```
 
 # 9. Valori extreme
-# Determinați cea mai mare valoare, cea mai mică și diferența dintre trei numere date.
-# Input:
+Determinați cea mai mare valoare, cea mai mică și diferența dintre trei numere date.
+
+## Input:
+```python
 a, b, c = 5, 9, 3
+```
 # Output:
+```python
 Max: 9
 Min: 3
 Diferență: 6
+```
 
 # 10. Număr prim și suma divizorilor
-# Verificați dacă un număr natural este prim și calculați suma tuturor divizorilor săi.
-# Input:
+Verificați dacă un număr natural este prim și calculați suma tuturor divizorilor săi.
+
+## Input:
+```python
 n = 7
-# Output:
+```
+## Output:
+```python
 Prim: Da
 Suma divizorilor: 8
+```
 
 # 11. Pătrate perfecte și puteri ale lui 2
-# În intervalul [a, b], afișați toate numerele care sunt pătrate perfecte sau puteri ale lui 2.
-# Input:
+În intervalul [a, b], afișați toate numerele care sunt pătrate perfecte sau puteri ale lui 2.
+
+## Input:
+```python
 a, b = 1, 20
-# Output:
+```
+## Output:
+```python
 1 2 4 8 9 16
+```
 
 # 12. Număr apariții subșir
-# Determinați de câte ori apare un subșir într-un șir dat (fără suprapunere).
-# Input:
+Determinați de câte ori apare un subșir într-un șir dat (fără suprapunere).
+
+## Input:
+```python
 text = "ababab"
 subsir = "ab"
-# Output:
+```
+## Output:
+```python
 Apariții: 3
+```
 
 # 13. Poziții subșir
-# Afișați toate pozițiile de start ale unui subșir într-un șir mai lung, fără suprapunere.
-# Input:
+Afișați toate pozițiile de start ale unui subșir într-un șir mai lung, fără suprapunere.
+
+## Input:
+```python
 text = "abcabca"
 termen = "abc"
-# Output:
+```
+## Output:
+```python
 Poziții: 0, 3
+```
 
 # 14. Cifrul lui Cezar
-# Cifrați un text folosind cifrul lui Cezar cu o valoare k. Toate literele trebuie afișate în majuscule.
-# Input:
+Cifrați un text folosind cifrul lui Cezar cu o valoare k. Toate literele trebuie afișate în majuscule.
+
+## Input:
+```python
 text = "Ana are mere"
 k = 3
-# Output:
+```
+## Output:
+```python
 DND DUH PHUH
+```
 
 # 15. Limba păsărească
-# Transformă un text în limba păsărească: după fiecare vocală, adăugați p și încă o dată vocala.
+Transformă un text în limba păsărească: după fiecare vocală, adăugați p și încă o dată vocala.
 # Input:
 text = "Ana are mere"
 # Output:
