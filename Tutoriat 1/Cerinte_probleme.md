@@ -187,55 +187,87 @@ DND DUH PHUH
 
 # 15. Limba păsărească
 Transformă un text în limba păsărească: după fiecare vocală, adăugați p și încă o dată vocala.
-# Input:
+
+## Input:
+```python
 text = "Ana are mere"
-# Output:
+```
+## Output:
+```python
 Apanapa aparepe mepere
+```
 
 # 16. Fibonacci și diferențe
-# Afișați primele n valori Fibonacci și diferențele dintre fiecare două valori consecutive.
-# Input:
+Afișați primele n valori Fibonacci și diferențele dintre fiecare două valori consecutive.
+
+## Input:
+```python
 n = 5
-# Output:
+```
+## Output:
+```python
 Fibonacci: 0 1 1 2 3
 Diferențe: 1 0 1 1
+```
 
 # 17. Suma numerelor din text
-# Dintr-o propoziție, calculați suma tuturor numerelor naturale și numărul lor de apariții.
-# Input:
+Dintr-o propoziție, calculați suma tuturor numerelor naturale și numărul lor de apariții.
+
+## Input:
+```python
 text = "Am cumparat 5 mere, 10 pere si 15 prune"
-# Output:
+```
+## Output:
+```python
 Suma totală: 30
 Număr de valori: 3
+```
 
 # 18. Piramidă numerică
-# Afișați o piramidă crescătoare până la n și apoi inversa acesteia.
-# Input:
-n = 4
-# Output:
-1
-1 2
-1 2 3
-1 2 3 4
-1 2 3 4
-1 2 3
-1 2
-1
+Afișați o piramidă crescătoare până la n și apoi inversa acesteia.
 
-# 19. Secvență „vârf”
-# Verificați dacă cinci valori individuale formează un vârf: cresc până la maxim și apoi scad.
-# Input:
-v1, v2, v3, v4, v5 = 1, 3, 5, 4, 2
-# Output:
-Este creastă: Da
+## Input:
+```python
+n = 4
+```
+## Output:
+```python
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4
+1 2 3
+1 2
+1
+```
+
+# 19. Cod de acces invers
+Citiți un șir de 5 caractere care reprezintă un cod de acces.  
+Verificați dacă primul și ultimul caracter sunt litere, iar celelalte trei sunt cifre.  
+Afișați "Valid" dacă regula este respectată, altfel "Invalid".
+
+## Input:
+```python
+cod = "A123B"
+```
+## Output:
+```python
+Valid
+```
 
 # 20. Conversii și proprietăți numerice
-# Pentru un număr real x, calculați pătratul, cubul, inversul (dacă x ≠ 0), valoarea absolută și rotunjirea la 2 zecimale.
-# Input:
+Pentru un număr real x, calculați pătratul, cubul, inversul (dacă x ≠ 0), valoarea absolută și rotunjirea la 2 zecimale.
+
+## Input:
+```python
 x = -2.5
-# Output:
+```
+## Output:
+```python
 Pătrat: 6.25
 Cub: -15.625
 Invers: -0.4
 Valoare absolută: 2.5
 Rotunjire la 2 zecimale: -2.50
+```
