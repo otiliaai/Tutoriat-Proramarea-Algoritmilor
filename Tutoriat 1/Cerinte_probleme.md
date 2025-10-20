@@ -90,7 +90,7 @@ n = 1221
 ## Output:
 ```python
 Palindrom: Da
-Ultima cifră: pară
+Ultima cifră: impară
 ```
 
 # 8. Înlocuire caractere
