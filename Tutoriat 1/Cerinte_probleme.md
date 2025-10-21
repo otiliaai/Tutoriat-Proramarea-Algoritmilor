@@ -182,7 +182,11 @@ k = 3
 ```
 ## Output:
 ```python
-DND DUH PHUH
+DQD
+
+DUH
+
+PHUH
 ```
 
 # 15. Limba păsărească
