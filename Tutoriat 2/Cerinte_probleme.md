@@ -1,45 +1,54 @@
+
+
 # PROBLEMA 1
 ---
-Se citește un text format din cuvinte și separatori.  
-Cuvintele sunt formate din litere mici ale alfabetului, iar separatorii sunt spațiul și caracterele din șirul `.,!?:;-`.
+## 📝 Descriere și Reguli
 
-## Cerințe
-În funcție de valoarea lui `T` (1 ≤ T ≤ 6) se cere una dintre următoarele operații:
+Se citește un text compus din cuvinte și separatori.
 
-1. (`T = 1`) Afișați `n` — numărul de cuvinte din text, apoi lista cuvintelor, câte unul pe rând.  
-2. (`T = 2`) Afișați cuvântul cel mai mic lexicografic.  
-3. (`T = 3`) Afișați numărul de cuvinte care conțin secvența `ini`.  
-4. (`T = 4`) Afișați fiecare cuvânt oglindit (inversat), câte unul pe rând.  
-5. (`T = 5`) Afișați numărul de cuvinte care se termină cu litera `a`.  
-6. (`T = 6`) Afișați, separate printr-un spațiu, lungimea minimă și lungimea maximă a unui cuvânt.
-
-> Notă: după citirea lui `T`, se citește o linie întreagă care conține textul.
+* **Cuvintele:** Sunt formate exclusiv din litere mici (`a`-`z`).
+* **Separatorii:** Sunt spațiul (` `) și setul de caractere: `.,!?:;-`.
 
 ---
 
-## Date de intrare
-- Prima linie: numărul natural `T`  
-- A doua linie: textul propriu-zis
+## ✨ Cerințe Funcționale ($T$)
 
-## Date de ieșire
-Programul va afișa rezultatul cerut pentru `T`.
+Programul citește mai întâi $T$ și apoi textul. Rezultatul se afișează la Ieșirea Standard (Consolă).
+
+| $T$ | Sarcina de Rezolvat | Ieșire la Consolă |
+| :---: | :--- | :--- |
+| **1** | **Numărare și Listare** | Numărul total de cuvinte, urmat de lista cuvintelor (câte unul pe rând). |
+| **2** | **Cuvântul Minim Lexicografic** | Cuvântul care apare primul în ordine alfabetică. |
+| **3** | **Căutare Subșir** | Numărul de cuvinte care conțin secvența **`ini`**. |
+| **4** | **Oglindire** | Fiecare cuvânt din text, afișat **inversat** (oglindit), câte unul pe rând. |
+| **5** | **Terminație Specifică** | Numărul de cuvinte care se termină cu litera **`a`**. |
+| **6** | **Lungimi Extrerme** | Lungimea minimă urmată de lungimea maximă (separate printr-un spațiu). |
 
 ---
 
-## Exemple
+## 🔑 Restricții
 
-### Exemplul 1
-**Input:**
-```python
-1
-...destul de rece? desigur!
+* Lungimea Textului $\le 1000$ de caractere.
+* Lungimea fiecărui Cuvânt $\le 50$ de caractere.
 
-```
-**Output:**
-```python
-4
-destul
-de
-rece
-desigur
-```
+---
+
+## 💡 Exemple
+
+### Exemplul 1: $T=1$ (Listare)
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `1` <br> `...destul de rece? desigur!` | `4` <br> `destul` <br> `de` <br> `rece` <br> `desigur` |
+
+### Exemplul 2: $T=4$ (Oglindire)
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `4` <br> `...destul de rece? desigur!` | `lutsed` <br> `ed` <br> `ecer` <br> `rugised` |
+
+### Exemplul 3: $T=6$ (Min/Max)
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `6` <br> `este frumoasa, desteapta si devreme acasa.` | `2 9` |
