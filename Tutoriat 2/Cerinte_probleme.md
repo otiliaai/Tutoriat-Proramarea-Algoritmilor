@@ -1,5 +1,4 @@
 
-
 # PROBLEMA 1 : Prelucrare text
 
 ## 📝 Descriere și Reguli
@@ -97,12 +96,6 @@ Se citește un text compus din cuvinte și separatori.
 | `o floare mica si frumoasa.` | `NU` |
 
 # 💻 PROBLEMA 3: Cuvinte Prefixe
-
-## 🎯 Obiectiv
-
-Implementarea unui program care identifică și listează toate cuvintele din text care sunt prefixe ale altor cuvinte din același text.
-
----
 
 ## 📝 Descriere și Reguli
 
