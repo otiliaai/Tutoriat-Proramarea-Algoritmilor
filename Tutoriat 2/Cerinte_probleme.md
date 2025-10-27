@@ -1,7 +1,7 @@
 
 
-# PROBLEMA 1
----
+# PROBLEMA 1 : Prelucrare text
+
 ## 📝 Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
@@ -52,3 +52,140 @@ Programul citește mai întâi $T$ și apoi textul. Rezultatul se afișează la 
 | Intrare (Consolă) | Ieșire (Consolă) |
 | :--- | :--- |
 | `6` <br> `este frumoasa, desteapta si devreme acasa.` | `2 9` |
+
+
+# 💻 PROBLEMA 2: Cuvinte cu Lungimi Egale
+
+## 🎯 Obiectiv
+
+Implementarea unui program care identifică prima pereche de cuvinte consecutive care au aceeași lungime.
+
+---
+
+## 📝 Descriere și Reguli
+
+Se citește un text compus din cuvinte și separatori.
+
+* **Cuvintele:** Sunt formate din litere mici (`a`-`z`).
+* **Separatorii:** Sunt spațiul (` `) și setul de caractere: `.,!?:;-`.
+
+---
+
+## ✨ Cerințe Funcționale ($T$)
+
+| Operație Cerută | Ieșire la Consolă |
+| :--- | :--- |
+| **Găsirea Perechii Adiacente** | Se afișează cele două cuvinte consecutive cu aceeași lungime, separate printr-un spațiu. Dacă nu există, se afișează mesajul **`NU`**. |
+
+---
+
+## 🔑 Restricții
+
+* Se afișează doar **prima pereche** întâlnită.
+
+---
+
+## 💡 Exemple
+
+### Exemplul 1 (Găsit)
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `ce face acum el la mare.` | `face acum` |
+
+### Exemplul 2 (Negăsit)
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `o floare mica si frumoasa.` | `NU` |
+
+# 💻 PROBLEMA 3: Cuvinte Prefixe
+
+## 🎯 Obiectiv
+
+Implementarea unui program care identifică și listează toate cuvintele din text care sunt prefixe ale altor cuvinte din același text.
+
+---
+
+## 📝 Descriere și Reguli
+
+Se citește un text compus din cuvinte și separatori.
+
+* **Cuvintele:** Sunt formate din litere mici (`a`-`z`).
+* **Separatorii:** Sunt spațiul (` `) și setul de caractere: `.,!?:;-`.
+
+---
+
+## ✨ Cerințe Funcționale ($T$)
+
+| Operație Cerută | Ieșire la Consolă |
+| :--- | :--- |
+| **Identificarea Cuvintelor care sunt Prefix** | Se afișează, pe rânduri separate, cuvintele care sunt prefixe ale altor cuvinte din text, în **ordinea apariției** în textul original. |
+
+---
+
+## 🔑 Restricții
+
+* Un cuvânt **nu** este considerat prefix al lui însuși.
+* Fiecare cuvânt care îndeplinește condiția se afișează o singură dată.
+
+---
+
+## 💡 Exemple
+
+### Exemplul 1
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `a avea acel ceas, a acorda atentie.` | `a` <br> `ace` <br> `acorda` |
+
+### Exemplul 2
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `initial, initiative, toate inima.` | `initial` |
+
+# 💻 PROBLEMA 4: Decodare Text
+
+## 🎯 Obiectiv
+
+Implementarea unui program care filtrează cuvintele dintr-un text, eliminându-le pe cele care conțin cifre.
+
+---
+
+## 📝 Descriere și Reguli
+
+Se citește un text codificat.
+
+* **Cuvintele:** Pot conține litere mari/mici, cifre și simboluri.
+* **Separatorii:** Spațiul (` `) este singurul separator.
+
+---
+
+## ✨ Cerințe Funcționale ($T$)
+
+| Operație Cerută | Regula de Decodificare | Ieșire la Consolă |
+| :--- | :--- | :--- |
+| **Filtrare Cuvinte** | Dacă un cuvânt **conține cel puțin o cifră**, el este eliminat. Dacă **nu conține nicio cifră**, el este păstrat și afișat. | Cuvintele păstrate, separate printr-un spațiu, în ordinea apariției lor. |
+
+---
+
+## 🔑 Restricții
+
+* Operația de filtrare se aplică strict pe cuvinte individuale.
+
+---
+
+## 💡 Exemple
+
+### Exemplul 1
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `ana are 3 mere si 5 pere` | `ana are si pere` |
+
+### Exemplul 2
+
+| Intrare (Consolă) | Ieșire (Consolă) |
+| :--- | :--- |
+| `A1b este codat corect` | `este codat corect` |
