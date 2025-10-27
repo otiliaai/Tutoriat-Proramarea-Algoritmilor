@@ -99,7 +99,6 @@ Listele suportă adăugare, ștergere și înlocuire de elemente, deoarece sunt 
 
 ```python
 materii = ["Algebra", "Analiza", "Fizica"]
-```
 
 # 1. Adăugare la sfârșit
 materii.append("Programare")
@@ -116,6 +115,7 @@ materii.remove("Fizica")
 # 4. Ștergere după index (și returnare)
 materii.pop(0)
 # ["Analiza Matematică", "Programare"]
+```
 
 
 ## 4. Funcții Utile pentru Liste
