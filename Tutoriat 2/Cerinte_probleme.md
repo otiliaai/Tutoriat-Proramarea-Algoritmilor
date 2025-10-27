@@ -1,9 +1,7 @@
-#PROBLEMA 1
+# PROBLEMA 1
 ---
 Se citește un text format din cuvinte și separatori.  
 Cuvintele sunt formate din litere mici ale alfabetului, iar separatorii sunt spațiul și caracterele din șirul `.,!?:;-`.
-
----
 
 ## Cerințe
 În funcție de valoarea lui `T` (1 ≤ T ≤ 6) se cere una dintre următoarele operații:
