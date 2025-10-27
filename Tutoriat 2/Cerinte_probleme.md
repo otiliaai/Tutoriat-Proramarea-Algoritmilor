@@ -54,13 +54,10 @@ Programul citește mai întâi $T$ și apoi textul. Rezultatul se afișează la 
 | `6` <br> `este frumoasa, desteapta si devreme acasa.` | `2 9` |
 
 
-# 💻 PROBLEMA 2: Cuvinte cu Lungimi Egale
-
-## 🎯 Obiectiv
-
-Implementarea unui program care identifică prima pereche de cuvinte consecutive care au aceeași lungime.
-
 ---
+
+
+# 💻 PROBLEMA 2: Cuvinte cu Lungimi Egale
 
 ## 📝 Descriere și Reguli
 
@@ -145,13 +142,13 @@ Se citește un text compus din cuvinte și separatori.
 | :--- | :--- |
 | `initial, initiative, toate inima.` | `initial` |
 
+---
+
+
+
 # 💻 PROBLEMA 4: Decodare Text
 
 ## 🎯 Obiectiv
-
-Implementarea unui program care filtrează cuvintele dintr-un text, eliminându-le pe cele care conțin cifre.
-
----
 
 ## 📝 Descriere și Reguli
 
