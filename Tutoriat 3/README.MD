@@ -25,6 +25,7 @@ student = ["Ion Popescu", 19, 9.75, True]
 
 # Listă de liste (matrice simplă)
 matrice = [[1, 2], [3, 4]]
+```
 
 
 ## 2. Accesarea Elementelor (Indexare & Slicing)
@@ -48,7 +49,7 @@ print(numere[0])    # Ieșire: 10
 
 # Accesarea ultimului element (folosind indexul negativ)
 print(numere[-1])   # Ieșire: 40
-
+```
 
 ### B. Slicing (Felierea)
 
@@ -73,6 +74,8 @@ print(litere[:])      # Ieșire: ['a', 'b', 'c', 'd', 'e', 'f']
 # Elementele cu pas de 2
 print(litere[::2])    # Ieșire: ['a', 'c', 'e']
 
+```
+
 ## 3. Modificarea Listelor (Mutabilitate)
 
 Listele suportă adăugare, ștergere și înlocuire de elemente, deoarece sunt **mutabile**.
@@ -96,6 +99,7 @@ Listele suportă adăugare, ștergere și înlocuire de elemente, deoarece sunt 
 
 ```python
 materii = ["Algebra", "Analiza", "Fizica"]
+```
 
 # 1. Adăugare la sfârșit
 materii.append("Programare")
