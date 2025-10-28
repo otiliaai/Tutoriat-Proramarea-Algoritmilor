@@ -170,7 +170,7 @@ Se citește un text codificat.
 
 | Intrare (Consolă) | Ieșire (Consolă) |
 | :--- | :--- |
-| `ana are 3 mere si 5 pere` | `ana are si pere` |
+| `ana are 3mere si 5 pere` | `ana are si pere` |
 
 ### Exemplul 2
 
