@@ -217,7 +217,7 @@ Se citește un text urmat de o literă.
 | Intrare (Consolă) | Ieșire (Consolă) |
 | :--- | :--- |
 | `a` <br> `ana are mere si banane` | `ana` <br> `banane` |
-| `r` <br> `barometru caramida arici` | `caramida` |
+| `r` <br> `barometru caramida arici` | `barometru` |
 
 
 ---
