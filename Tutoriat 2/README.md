@@ -127,7 +127,7 @@ Se citește un text compus din cuvinte și separatori.
 
 | Intrare (Consolă) | Ieșire (Consolă) |
 | :--- | :--- |
-| `a avea acel ceas, a acorda atentie.` | `a` <br> `ace` <br> `acorda` |
+| `a avea acel ceas, a acorda atentie.` | `a` <br> |
 
 ### Exemplul 2
 
