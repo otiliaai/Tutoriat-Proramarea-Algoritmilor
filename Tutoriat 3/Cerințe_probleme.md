@@ -10,12 +10,13 @@
 
 **Soluție:**
 
+### Input:
 ```python
-# Input:
 3 5
 ```
+
+### Output:
 ```python
-# Output:
 [9,16,25]
 ```
 
