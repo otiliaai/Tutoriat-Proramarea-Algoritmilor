@@ -31,6 +31,7 @@ student = ["Ion Popescu", 19, 9.75, True]
 
 # Listă de liste (matrice simplă)
 matrice = [[1, 2], [3, 4]]
+```
 
 ### 1.2 Accesarea elementelor
 
@@ -54,7 +55,7 @@ print(numere[0])   # Output: 10
 
 # Accesarea ultimului element folosind index negativ
 print(numere[-1])  # Output: 40
-
+```
 
 ### 1.3 Felierea (Slicing)
 
@@ -71,6 +72,7 @@ lista[start:stop:pas]
 -pas → intervalul de sărituri (implicit 1)
 
 litere = ["a", "b", "c", "d", "e", "f"]
+```
 
 ```python
 # Primele trei elemente
@@ -131,7 +133,7 @@ materii.remove("Fizica")  # ["Algebra", "Analiza Matematică", "Programare"]
 materii.pop(0)  # ["Analiza Matematică", "Programare"]
 
 print(materii)  # Ieșire: ['Analiza Matematică', 'Programare']
-
+```
 
 ### 1.5 Funcții și metode utile pentru liste
 
@@ -277,4 +279,4 @@ nume, (an, oras) = date
 
 print(f"{nume} s-a născut în {an} la {oras}.")
 # Ieșire: Andrei s-a născut în 2003 la Cluj.
-
+```
