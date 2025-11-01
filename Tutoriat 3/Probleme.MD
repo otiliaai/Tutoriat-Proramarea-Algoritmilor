@@ -1,135 +1,128 @@
-# Introducere în Liste (Lists) în Python
----
+# Probleme: List Comprehensions
 
-## 1. Ce Este o Listă în Python?
-
-O **listă** este o colecție de elemente, declarată ca fiind:
-
-1.  **Ordonată:** Elementele au o ordine bine definită (index) și această ordine nu se schimbă decât dacă este modificată explicit.
-2.  **Mutabilă:** Poate fi modificată după ce a fost creată (elementele pot fi adăugate, șterse sau schimbate).
-3.  **Heterogenă:** Poate conține elemente de tipuri de date diferite (e.g., `int`, `str`, `float`, sau chiar alte liste).
-
-### Sintaxă:
-
-Listele sunt definite folosind **paranteze drepte** (`[]`).
-
-```python
-# Listă goală
-lista_goala = []
-
-# Listă cu numere
-numere = [10, 20, 30, 40]
-
-# Listă cu elemente mixte
-student = ["Ion Popescu", 19, 9.75, True]
-
-# Listă de liste (matrice simplă)
-matrice = [[1, 2], [3, 4]]
-```
-
-
-## 2. Accesarea Elementelor (Indexare & Slicing)
-
-Elementele unei liste sunt accesate pe baza **indexului** lor, care începe întotdeauna de la **0**.
-
-### A. Indexarea Simplă
-
-| Elementul | Index (pozitiv) | Index (negativ) |
-| :---: | :---: | :---: |
-| `10` | $\mathbf{0}$ | $\mathbf{-4}$ |
-| `20` | $1$ | $-3$ |
-| `30` | $2$ | $-2$ |
-| `40` | $\mathbf{3}$ | $\mathbf{-1}$ |
-
-```python
-numere = [10, 20, 30, 40]
-
-# Accesarea primului element
-print(numere[0])    # Ieșire: 10
-
-# Accesarea ultimului element (folosind indexul negativ)
-print(numere[-1])   # Ieșire: 40
-```
-
-### B. Slicing (Felierea)
-
-Slicing-ul permite extragerea unei **sub-liste** (o porțiune) dintr-o listă, folosind sintaxa: `lista[start:stop:pas]`.
-
-* **`start`**: Indexul de la care începe sub-lista (inclusiv).
-* **`stop`**: Indexul la care se oprește sub-lista (**exclusiv**).
-* **`pas`**: Intervalul de săritură (implicit este 1).
-
-```python
-litere = ["a", "b", "c", "d", "e", "f"]
-
-# Primele trei elemente
-print(litere[0:3])    # Ieșire: ['a', 'b', 'c']
-
-# Toate elementele de la indexul 2 până la sfârșit
-print(litere[2:])     # Ieșire: ['c', 'd', 'e', 'f']
-
-# Toate elementele din listă (copie a listei)
-print(litere[:])      # Ieșire: ['a', 'b', 'c', 'd', 'e', 'f']
-
-# Elementele cu pas de 2
-print(litere[::2])    # Ieșire: ['a', 'c', 'e']
-
-```
-
-## 3. Modificarea Listelor (Mutabilitate)
-
-Listele suportă adăugare, ștergere și înlocuire de elemente, deoarece sunt **mutabile**.
-
-### A. Adăugarea Elementelor
-
-| Metodă | Descriere | Exemplu |
-| :--- | :--- | :--- |
-| **`.append(element)`** | Adaugă un element la **sfârșitul** listei. (Cea mai frecventă) | `lista.append("nou")` |
-| **`.insert(index, element)`** | Adaugă un element la o **poziție specificată**. | `lista.insert(1, "pozitie")` |
-| **`.extend(lista_noua)`** | Adaugă **toate elementele** unei alte liste la lista curentă. | `lista.extend([1, 2])` |
-
-### B. Modificarea și Ștergerea Elementelor
-
-| Metodă/Operator | Descriere | Exemplu |
-| :--- | :--- | :--- |
-| **Înlocuire** | Se schimbă valoarea unui element folosind indexul. | `lista[0] = "schimbat"` |
-| **`.remove(valoare)`** | Elimină **prima apariție** a unei valori specificate. | `lista.remove("b")` |
-| **`.pop(index)`** | Elimină și **returnează** elementul de la index. Fără argument, elimină ultimul element. | `ultimul = lista.pop()` |
-| **`del`** | Șterge un element pe baza indexului sau o întreagă secțiune (*slicing*). | `del lista[2]` sau `del lista[1:3]` |
-
-```python
-materii = ["Algebra", "Analiza", "Fizica"]
-
-# 1. Adăugare la sfârșit
-materii.append("Programare")
-# ["Algebra", "Analiza", "Fizica", "Programare"]
-
-# 2. Modificare
-materii[1] = "Analiza Matematică"
-# ["Algebra", "Analiza Matematică", "Fizica", "Programare"]
-
-# 3. Ștergere după valoare
-materii.remove("Fizica")
-# ["Algebra", "Analiza Matematică", "Programare"]
-
-# 4. Ștergere după index (și returnare)
-materii.pop(0)
-# ["Analiza Matematică", "Programare"]
-```
-
-
-## 4. Funcții Utile pentru Liste
-
-Aceste funcții și metode sunt folosite des pentru a obține informații sau a manipula conținutul unei liste.
-
-| Funcție/Metodă | Descriere | Exemplu |
-| :--- | :--- | :--- |
-| **`len(lista)`** | Returnează **numărul de elemente** din listă. | `lungime = len(materii)` |
-| **`in` (Operator)** | Verifică dacă o valoare **există** în listă (returnează `True`/`False`). | `"Python" in materii` |
-| **`.index(valoare)`** | Returnează **indexul** primei apariții a valorii. **Atenție:** dă eroare dacă valoarea nu există. | `idx = materii.index("Programare")` |
-| **`.count(valoare)`** | Returnează de câte ori apare o valoare în listă. | `nr_a = litere.count('a')` |
-| **`.sort()`** | **Sortează** lista pe loc (direct în listă). Modifică lista originală. | `numere.sort()` |
-| **`sorted(lista)`** | Returnează o **listă nouă sortată**, lăsând lista originală neschimbată. | `noua = sorted(numere)` |
-| **`.reverse()`** | Inversează ordinea elementelor **pe loc** (direct în listă). | `lista.reverse()` |
+**List comprehensions** în Python oferă o modalitate concisă și eficientă de a crea liste noi.
 
 ---
+
+## Problema 1: Pătratele numerelor
+
+Creează o listă nouă care să conțină pătratele numerelor întregi de la a la b.
+
+**Soluție:**
+
+### Input:
+```python
+3 5
+```
+
+### Output:
+```python
+[9,16,25]
+```
+
+## Problema 2: Numere pare
+
+Folosind o listă dată, creează o listă nouă care să conțină doar numerele pare.
+
+### Input:
+```python
+[1,3,54,65,789,3,4,6]
+```
+
+### Output:
+```python
+[54,4,6]
+```
+
+## Problema 3: Cuvinte cu o anumită lungime
+
+Dintr-o propoziție, extrage doar cuvintele care au mai puțin de n litere.
+Pe prima linie se va citi propoziția, iar pe linia următoare n. Să se întoarcă lista cuvintelor care respectă cerința și **-1** dacă nu există nici un cuvânt.
+
+### Input:
+```python
+Îmi place să fiu un programator
+3
+```
+
+### Output: 
+```python
+["să","un"]
+```
+
+## Problema 4: Conversie litere mari
+
+Convertește toate cuvintele dintr-o listă în majuscule.
+
+### Input:
+```python
+["mere", "banane", "cirese"]
+```
+
+### Output: 
+```python
+['MERE', 'BANANE', 'CIRESE']
+```
+
+## Problema 5: Elevi eminenți
+
+Un fișier text numit `note.txt` care conține pe fiecare linie numele unui student și nota sa (separate prin spațiu). Folosind list comprehension, citește fișierul și creează o listă care să conțină numele studenților care au obținut o notă mai mare sau egală cu 9.
+
+### Input:
+`note.txt`
+```python
+Ion 7
+Maria 9
+Petru 6
+Elena 10
+George 8
+Ana 9
+```
+
+### Output: 
+```python
+["Maria", "Elena", "Ana"]
+```
+
+## Problema 6: Extragere cifre
+
+Se citește o propoziție și se cere formarea unei liste care conține toate cifrele din acea propoziție.
+
+### Input:
+
+```python
+Am 2 mere si 5 banane, costa 12 lei.
+```
+
+### Output:
+```python
+[2,5,1,2]
+```
+
+
+## Problema 7
+
+Ai o listă de numere. Creează o listă nouă care să conțină doar rădăcinile pătrate ale numerelor care sunt divizibile cu 4.
+
+### Input:
+```python
+[4,17,64,99]
+```
+
+### Output:
+```python
+[2.0,8.0]
+```
+
+## Problema 8: Orașele
+
+Se dă o listă de orașe. Vrei să creezi o listă nouă care să conțină doar orașele care se află la un index par (0, 2, 4, etc.) în lista originală *și* care au o lungime a numelui mai mare de 5 caractere.
+
+### Input:
+```python
+orase = ["Bucuresti", "Brasov", "Cluj", "Timisoara", "Sibiu", "Constanta"]
+```
+### Output: 
+```python
+['Bucuresti', 'Timisoara', 'Constanta']
+```
