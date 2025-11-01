@@ -4,9 +4,9 @@
 
 ---
 
-### Problema 1: Pătratele numerelor
+## Problema 1: Pătratele numerelor
 
-**Enunț:** Creează o listă nouă care să conțină pătratele numerelor întregi de la a la b.
+Creează o listă nouă care să conțină pătratele numerelor întregi de la a la b.
 
 **Soluție:**
 
@@ -20,43 +20,49 @@
 [9,16,25]
 ```
 
-### Problema 2: Numere pare
+## Problema 2: Numere pare
 
-**Enunț:** Folosind o listă dată, creează o listă nouă care să conțină doar numerele pare.
+Folosind o listă dată, creează o listă nouă care să conțină doar numerele pare.
 
+### Input:
 ```python
-# Input:
 [1,3,54,65,789,3,4,6]
 ```
 
+### Output:
 ```python
-# Output:
 [54,4,6]
 ```
 
-### Problema 3: Cuvinte cu o anumită lungime
+## Problema 3: Cuvinte cu o anumită lungime
 
-**Enunț:** Dintr-o listă de cuvinte, extrage doar cuvintele care au mai puțin de 5 litere.
+Dintr-o propoziție, extrage doar cuvintele care au mai puțin de n litere.
+Pe prima linie se va citi propoziția, iar pe linia următoare n. Să se întoarcă lista cuvintelor care respectă cerința și **-1** dacă nu există nici un cuvânt.
 
-**Soluție:**
-
+### Input:
 ```python
-cuvinte = ["apple", "banana", "cherry", "kiwi", "mango"]
-cuvinte_scurte = [cuvant for cuvant in cuvinte if len(cuvant) < 5]
-print(cuvinte_scurte)
-# Output: ['kiwi']
+Îmi place să fiu un programator
+3
+```
 
-### Problema 4: Conversie litere mari
-
-**Enunț:** Convertește toate cuvintele dintr-o listă în majuscule.
-
-**Soluție:**
-
+### Output: 
 ```python
-fructe = ["mere", "banane", "cirese"]
-fructe_uppercase = [fruct.upper() for fruct in fructe]
-print(fructe_uppercase)
-# Output: ['MERE', 'BANANE', 'CIRESE']
+["să","un"]
+```
+
+## Problema 4: Conversie litere mari
+
+Convertește toate cuvintele dintr-o listă în majuscule.
+
+## Input:
+```python
+["mere", "banane", "cirese"]
+```
+
+# Output: 
+```python
+['MERE', 'BANANE', 'CIRESE']
+```
 
 ### Problema 8: Crearea unui dicționar din două liste
 
