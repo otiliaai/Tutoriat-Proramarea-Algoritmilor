@@ -54,138 +54,75 @@ Pe prima linie se va citi propoziția, iar pe linia următoare n. Să se întoar
 
 Convertește toate cuvintele dintr-o listă în majuscule.
 
-## Input:
+### Input:
 ```python
 ["mere", "banane", "cirese"]
 ```
 
-# Output: 
+### Output: 
 ```python
 ['MERE', 'BANANE', 'CIRESE']
 ```
 
-### Problema 8: Crearea unui dicționar din două liste
+## Problema 5: Elevi eminenți
 
-**Enunț:** Folosește list comprehension (sau dictionary comprehension, care este înrudită) pentru a crea un dicționar din două liste, una conținând cheile și alta valorile corespunzătoare. Presupune că listele au aceeași lungime.
+Un fișier text numit `note.txt` care conține pe fiecare linie numele unui student și nota sa (separate prin spațiu). Folosind list comprehension, citește fișierul și creează o listă care să conțină numele studenților care au obținut o notă mai mare sau egală cu 9.
 
-**Soluție (folosind dictionary comprehension):**
-
-Deși este o "dictionary comprehension" și nu o "list comprehension", este o extindere logică și folosește un principiu similar.
-
+### Input:
+`note.txt`
 ```python
-chei = ["unu", "doi", "trei"]
-valori =
-dictionar = {chei[i]: valori[i] for i in range(len(chei))}
-print(dictionar)
-# Output: {'unu': 1, 'doi': 2, 'trei': 3}
-
-### Problema 9: Citirea datelor dintr-un fișier și filtrarea lor
-
-**Enunț:** Ai un fișier text numit `note.txt` care conține pe fiecare linie numele unui student și nota sa (separate prin spațiu). Folosind list comprehension, citește fișierul și creează o listă care să conțină numele studenților care au obținut o notă mai mare sau egală cu 9.
-
-**Conținutul fișierului `note.txt` (presupus):**
-
-```text
 Ion 7
 Maria 9
 Petru 6
 Elena 10
 George 8
 Ana 9
+```
 
-text_amestecat = "Am 2 mere si 5 banane, costa 12 lei."
+### Output: 
+```python
+["Maria", "Elena", "Ana"]
+```
 
-# Folosim metoda .isdigit() pentru a verifica dacă un caracter este o cifră
-numere_extrase = [int(char) for char in text_amestecat if char.isdigit()]
+## Problema 6: Extragere cifre
 
-print(numere_extrase)
-# Output:
+Se citește o propoziție și se cere formarea unei liste care conține toate cifrele din acea propoziție.
 
-### Problema 11: Aplicarea unei funcții pe elementele unei liste și filtrarea simultană
-
-**Enunț:** Ai o listă de numere. Creează o listă nouă care să conțină doar rădăcinile pătrate ale numerelor care sunt divizibile cu 4.
-
-**Soluție:**
+### Input:
 
 ```python
-import math
+Am 2 mere si 5 banane, costa 12 lei.
+```
 
-numere =
-# list comprehension care aplică math.sqrt() DOAR numerelor care trec testul "if"
-radacini_filtrate = [math.sqrt(x) for x in numere if x % 4 == 0]
-
-print(radacini_filtrate)
-# Output: [2.0, 3.0, 4.0, 5.0, 6.0]
-
-
-### Problema 12: Generarea unui pachet de cărți de joc (Nested List Comprehension)
-
-**Enunț:** Folosește un "nested list comprehension" pentru a genera un pachet complet de 52 de cărți de joc. Pachetul trebuie să fie o listă de șiruri de caractere (`strings`), unde fiecare element combină valoarea cărții cu simbolul suitei (ex: "2 de Inimă Roșie", "Rege de Pică").
-
-**Soluție:**
-
+### Output:
 ```python
-simboluri = ["Inimă Roșie", "Caro", "Pică", "Trefle"]
-valori = ["As", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Valet", "Damă", "Rege"]
-
-# Iterăm prin fiecare simbol în bucla exterioară, apoi prin fiecare valoare în cea interioară
-pachet_carti = [
-    f"{valoare} de {simbol}" 
-    for simbol in simboluri 
-    for valoare in valori
-]
-
-# Afișăm primele 5 cărți pentru verificare
-for carte in pachet_carti[:5]:
-    print(carte)
+[2,5,1,2]
+```
 
 
-### Problema 14: Filtrarea elementelor în funcție de poziția lor (Index)
+## Problema 7
 
-**Enunț:** Ai o listă de orașe. Vrei să creezi o listă nouă care să conțină doar orașele care se află la un index par (0, 2, 4, etc.) în lista originală *și* care au o lungime a numelui mai mare de 5 caractere.
+Ai o listă de numere. Creează o listă nouă care să conțină doar rădăcinile pătrate ale numerelor care sunt divizibile cu 4.
 
-**Soluție:**
+### Input:
+```python
+[4,17,64,99]
+```
 
-Pentru a accesa și indexul în timpul iterației cu list comprehension, folosim funcția încorporată `enumerate()`.
+### Output:
+```python
+[2.0,8.0]
+```
 
+## Problema 8: Orașele
+
+Se dă o listă de orașe. Vrei să creezi o listă nouă care să conțină doar orașele care se află la un index par (0, 2, 4, etc.) în lista originală *și* care au o lungime a numelui mai mare de 5 caractere.
+
+### Input:
 ```python
 orase = ["Bucuresti", "Brasov", "Cluj", "Timisoara", "Sibiu", "Constanta"]
-
-# Folosim enumerate() pentru a obține indexul (idx) și valoarea (oras)
-# Condiția principală: idx % 2 == 0 (index par)
-# Condiția secundară: len(oras) > 5 (lungime nume > 5)
-orase_filtrate = [
-    oras 
-    for idx, oras in enumerate(orase) 
-    if idx % 2 == 0 and len(oras) > 5
-]
-
-print(orase_filtrate)
-# Output: ['Bucuresti', 'Timisoara', 'Constanta']
-
-### Problema 15: Transformarea unei liste de dicționare (List of Dictionaries)
-
-**Enunț:** Ai o listă de dicționare, unde fiecare dicționar reprezintă un produs cu numele și prețul său. Vrei să creezi o singură listă care să conțină doar numele produselor care costă mai mult de 50 RON.
-
-**Soluție:**
-
+```
+### Output: 
 ```python
-produse = [
-   ,
-   ,
-   ,
-   ,
-   
-]
-
-# Iterăm prin fiecare dicționar (produs) din lista principală
-# Verificăm condiția pe cheia 'pret'
-# Dacă trece, extragem și adăugăm în lista finală doar valoarea cheii 'nume'
-produse_scumpe = [
-    produs['nume'] 
-    for produs in produse 
-    if produs['pret'] > 50
-]
-
-print(produse_scumpe)
-# Output: ['Laptop', 'Mouse Gaming', 'Monitor']
+['Bucuresti', 'Timisoara', 'Constanta']
+```
