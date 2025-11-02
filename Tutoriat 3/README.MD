@@ -222,6 +222,24 @@ student = ("Maria", 21, 9.8)
 tuplu_unic = (5,)
 ```
 
+
+
+### ⚙️ Crearea tuplurilor
+
+Tuplurile se definesc cu **paranteze rotunde** `()` sau pur și simplu prin separare cu virgule.
+
+```python
+# Declarații de tupluri
+gol = ()
+pereche = (1, 2)
+auto_creat = 1, 2, 3  # fără paranteze
+mix = ("Text", 10, 5.3, True)
+
+# Tuplu cu un singur element
+unu = (5,)     # necesară virgula!
+nu_tuplu = (5) # acesta este doar un int
+```
+
 ### 2.2 Accesarea elementelor
 
 Elementele unui tuplu sunt accesate prin **index**, la fel ca în liste. Indexul începe de la `0`.  
