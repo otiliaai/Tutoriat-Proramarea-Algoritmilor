@@ -63,6 +63,7 @@ print(numere[-1])  # Output: 40
 
 ```python
 lista[start:stop:pas]
+```
 
 
 -start → indexul de la care începe sub-lista (inclusiv)
@@ -71,6 +72,7 @@ lista[start:stop:pas]
 
 -pas → intervalul de sărituri (implicit 1)
 
+```python
 litere = ["a", "b", "c", "d", "e", "f"]
 ```
 
