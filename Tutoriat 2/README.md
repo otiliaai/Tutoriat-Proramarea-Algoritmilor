@@ -117,8 +117,8 @@ Se citește un text compus din cuvinte și separatori.
 
 | Intrare | Ieșire |
 | :--- | :--- |
-| `a avea acel ceas, a acorda atentie.` | `a` |
-| `initial, initiative, toate inima.` | `initial` |
+| `Inainte de a avea acel ceas, a muncit mult.` | `a` |
+| `Eu initial, am avut o initializare in ambele domenii.` | `initial` <br> `am`|
 
 ---
 
@@ -202,7 +202,7 @@ Se citește un text compus din cuvinte și separatori.
 
 | Intrare | Ieșire |
 | :--- | :--- |
-| `ala are mere si pere` | `ala` <br> `mere` <br> `pere` |
+| `ala are multe mere dar nu face un efort minim sa ia si pentru mine unu` | `ala` <br> `unu` <br> `minim` |
 
 ---
 
@@ -224,6 +224,10 @@ Se citește un text compus din cuvinte și separatori.
 | **Filtrare după poziție** | Se afișează, pe rânduri separate, cuvintele care se află pe poziții impare (1, 3, 5 etc.) în text. |
 
 ---
+
+## 🔑 Restricții
+
+* Începe numărarea cuvintelor de la 1 
 
 ## 💡 Exemple
 
@@ -304,7 +308,7 @@ Se citește un text compus din cuvinte și separatori.
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
-| **Filtrare consoane pure** | Se afișează, pe rânduri separate, cuvintele care conțin **doar consoane**. |
+| **Filtrare consoane pure** | Se afișează, prin spațiu, cuvintele care conțin mai mult de jumătate din lungimea lor **consoane**. |
 
 ---
 
@@ -312,7 +316,7 @@ Se citește un text compus din cuvinte și separatori.
 
 | Intrare | Ieșire |
 | :--- | :--- |
-| `frate meu a facut un test` | `test` |
+| `frate meu a facut un test` | `frate facut test` |
 
 ---
 
