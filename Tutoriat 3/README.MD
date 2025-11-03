@@ -229,7 +229,7 @@ print(patrate)  # [1, 4, 9, 16, 25]
 ```
 
 
-####2️⃣ Filtrarea elementelor pare
+#### 2️⃣ Filtrarea elementelor pare
 
 ```python
 numere = [1, 2, 3, 4, 5, 6, 7, 8]
