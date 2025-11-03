@@ -201,6 +201,82 @@ print(2 in a)  # True
 print(6 in b)  # False
 ```
 
+###  1.7.  List Comprehension 
+
+**List comprehension** este o metodă scurtă și elegantă de a crea liste noi, pornind de la o altă listă (sau o secvență), înlocuind buclele `for` tradiționale.
+
+### 🔹 Sintaxă generală
+
+```python
+[expresie for element in secvență if condiție]
+```
+
+-expresie → valoarea care va fi adăugată în lista nouă
+
+-for element in secvență → iterarea elementelor
+
+-if condiție → (opțional) filtrează elementele
+
+
+### Exemple de bază
+
+#### 1️⃣ Generarea unei liste de pătrate
+
+```python
+numere = [1, 2, 3, 4, 5]
+patrate = [x**2 for x in numere]
+print(patrate)  # [1, 4, 9, 16, 25]
+```
+
+
+####2️⃣ Filtrarea elementelor pare
+
+```python
+numere = [1, 2, 3, 4, 5, 6, 7, 8]
+pare = [x for x in numere if x % 2 == 0]
+print(pare)  # [2, 4, 6, 8]
+```
+
+#### 3️⃣ Aplicarea unei funcții asupra elementelor
+
+```python
+cuvinte = ["python", "este", "tare"]
+majuscule = [cuvant.upper() for cuvant in cuvinte]
+print(majuscule)  # ['PYTHON', 'ESTE', 'TARE']
+```
+
+#### 4️⃣ Eliminarea spațiilor dintr-o listă de stringuri
+
+```python
+nume = ["  Ana  ", "  Mihai", " Ioana "]
+curatate = [n.strip() for n in nume]
+print(curatate)  # ['Ana', 'Mihai', 'Ioana']
+```
+
+#### 5️⃣ Crearea unei liste de tuple (perechi)
+
+```python
+numere = [1, 2, 3, 4]
+perechi = [(x, x**2) for x in numere]
+print(perechi)  # [(1, 1), (2, 4), (3, 9), (4, 16)]
+```
+
+#### 6️⃣ List comprehension cu condiție „if-else”
+
+```python
+numere = [1, 2, 3, 4, 5]
+rezultat = ["par" if x % 2 == 0 else "impar" for x in numere]
+print(rezultat)  # ['impar', 'par', 'impar', 'par', 'impar']
+
+```
+
+#### 7️⃣Aplatizarea unei liste de liste (flattening)
+
+```python
+matrice = [[1, 2], [3, 4], [5, 6]]
+flat = [x for linie in matrice for x in linie]
+print(flat)  # [1, 2, 3, 4, 5, 6]
+```
 
 ## 2. Tupluri (Tuples)
 
