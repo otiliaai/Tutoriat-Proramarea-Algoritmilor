@@ -133,11 +133,11 @@ Se dă o listă de orașe. Vrei să creezi o listă nouă care să conțină doa
 
 ### Input:
 ```python
-orase = ["Bucuresti", "Brasov", "Cluj", "Timisoara", "Sibiu", "Constanta"]
+orase = ["Bucuresti", "Brasov", "Cluj", "Timisoara", "Sibiu","Chisinau", "Constanta"]
 ```
 ### Output: 
 ```python
-['Bucuresti', 'Timisoara', 'Constanta']
+['Bucuresti', 'Constanta']
 ```
 
 # Probleme: List Comprehensions pentru Matrice
@@ -159,11 +159,13 @@ n = 3
 
 ## Problema 11: Elemente pozitive în matrice
 
-Dintr-o matrice dată, extrage toate elementele pozitive într-o listă simplă.
+Dintr-o matrice dată, extrage toate elementele strict pozitive într-o listă simplă.
 
 ### Input:
 ```python
-matricea_data = [[1, -2, 3], [-1, 0, 2], [5, -6, 0]]
+1 -2 3
+-1 0 2
+5 -6 0
 ```
 ### Output:
 ```python
@@ -176,7 +178,9 @@ Dintr-o matrice, creează o listă cu suma elementelor fiecărei linii.
 
 ### Input:
 ```python
-matricea_data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+1 2 3
+4 5 6
+7 8 9
 ```
 ### Output:
 ```python
@@ -188,7 +192,9 @@ Transformă o matrice $n \times m$ într-o listă simplă cu toate elementele ei
 
 ### Input:
 ```python
-matricea_data = [[1, 2], [3, 4], [5, 6]]
+1 2
+3 4
+5 6
 ```
 ### Output:
 ```python
@@ -201,7 +207,9 @@ Dintr-o matrice, creează o listă cu toate elementele pare.
 
 ### Input:
 ```python
-matricea_data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+1 2 3
+4 5 6
+7 8 9
 ```
 ### Output:
 ```python
@@ -210,11 +218,12 @@ matricea_data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 ## Problema 15: Indici cu valori pozitive
 
-Dintr-o matrice $n \times m$, creează o listă cu perechi $(i, j)$ pentru elementele pozitive.
+Dintr-o matrice $n \times m$, creează o listă cu perechi $(i, j)$ pentru elementele strict pozitive.
 
 ### Input:
 ```python
-matricea_data = [[0, -1], [2, 3]]
+0 -1
+2 3
 ```
 ### Output:
 ```python
@@ -226,16 +235,17 @@ Creează transpunerea unei matrice folosind list comprehension.
 
 ### Input:
 ```python
-matricea_data = [[1, 2, 3], [4, 5, 6]]
+1 2 3
+4 5 6
 ```
 ### Output:
 ```python
 [[1, 4], [2, 5], [3, 6]]
 ```
 
-## Problema 17: Lista de tuple (Suma pară)
+## Problema 17: Suma pară
 
-Din două liste $a$ și $b$, creează o listă de tuple $(x, y)$ pentru fiecare pereche de elemente ($x$ din $a$ și $y$ din $b$) dacă $x + y$ este par.
+Din două liste $a$ și $b$, creează o listă de tupluri $(x, y)$ pentru fiecare pereche de elemente ($x$ din $a$ și $y$ din $b$) dacă $x + y$ este par.
 
 ### Input:
 ```python
@@ -248,15 +258,17 @@ b = [3, 4]
 ```
 ## Problema 18: Cuvinte palindrom
 
-Pe prima linie a fisierului `propozitie.in` este o propozitie cu cuvinte separate prin " " si cu `.` la sfarsit , extrage toate cuvintele care sunt palindroame și care au o lungime mai mare de 2 caractere, și afișează lista în `propozitie.out`.
+Pe prima linie a fisierului `propozitie.in` este o propozitie cu cuvinte separate prin " " si cu `.` la sfarsit , extrage toate cuvintele care sunt palindroame și care au o lungime mai mare de 3 caractere, și afișează lista în `propozitie.out`.
 
 ### Input:
+`propozitie.in`
 ```python
 Ana are radar civic si level si pop.
 ```
 ### Output:
+ `propozitie.out`
 ```python
-['Ana', 'radar', 'civic', 'level', 'pop']
+['radar', 'civic', 'level']
 ```
 
 ## Problema 19: Flatten matrice cu condiție
@@ -265,7 +277,9 @@ Dintr-o matrice, creează o listă simplă cu toate elementele care sunt mai mar
 
 ### Input:
 ```python
-matricea_data = [[1, 6, 3], [7, 4, 9], [2, 8, 5]]
+1 6 3
+7 4 9
+2 8 5
 ```
 ### Output:
 ```python
@@ -278,7 +292,8 @@ Dintr-o matrice de numere, creează o matrice boolean unde fiecare element este 
 
 ### Input:
 ```python
-matricea_data = [[1, -1], [0, 5]]
+1 -1
+0 5
 ```
 ### Output:
 ```python
@@ -286,7 +301,7 @@ matricea_data = [[1, -1], [0, 5]]
 ```
 ## Problema 21: Index și valoare (Valori impare)
 
-Dintr-o listă de numere, creează o listă de tuple $(index, valoare)$ doar pentru valorile impare.
+Dintr-o listă de numere, creează o listă de tupluri $(index, valoare)$ doar pentru valorile impare.
 
 ### Input:
 ```python
@@ -304,7 +319,9 @@ Dintr-o matrice, creează o listă cu liniile al căror total depășește un pr
 
 ### Input:
 ```python
-matricea_data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+1 2 3
+4 5 6
+7 8 9
 k = 10
 ```
 ### Output:
