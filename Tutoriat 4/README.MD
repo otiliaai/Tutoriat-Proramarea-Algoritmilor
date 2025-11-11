@@ -157,6 +157,20 @@ B = {3, 4, 5, 6}
 ```python
 s = {1, 2, 3}
 
+# Adăugare
+s.add(4)
+
+# Adăugare multiplă
+s.update([5, 6], {7, 8})
+
+# Ștergere
+s.remove(3)     # eroare dacă nu există
+s.discard(100)  # nu dă eroare
+
+# Elimină și întoarce un element aleator
+s.pop()
+```
+
 ### 2.5 Metode și functii
 
 | Metodă / Funcție | Exemplu | Descriere |
