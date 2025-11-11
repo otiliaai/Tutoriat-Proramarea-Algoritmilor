@@ -122,6 +122,7 @@ mix = {1, "text", True, 3.14}
 # Set gol (mare atenție!)
 gol = set()      # corect
 nu_set = {}      # dicționar gol
+```
 
 ### 2.2 Crearea seturilor
 
