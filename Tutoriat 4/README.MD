@@ -196,19 +196,7 @@ print(s)  # {1, 2, 3}
 lista2 = list(s)
 print(lista2)  # [1, 2, 3] (ordinea nu este garantată)
 ```
-# Adăugare
-s.add(4)
 
-# Adăugare multiplă
-s.update([5, 6], {7, 8})
-
-# Ștergere
-s.remove(3)     # eroare dacă nu există
-s.discard(100)  # nu dă eroare
-
-# Elimină și întoarce un element aleator
-s.pop()
-```
 
 
 
