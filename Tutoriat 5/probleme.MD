@@ -186,4 +186,3 @@ c: 0.028
 
 ---
 
-**Sfârșitul fișierului**
