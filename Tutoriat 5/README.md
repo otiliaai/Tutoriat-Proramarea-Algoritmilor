@@ -219,6 +219,7 @@ catalog_produse = {
         "PRS22B": {"nume": "Proza Scurta", "pret": 32.50, "stoc": 150}
     }
 }
+```
 
 1. Accesarea Detaliilor unui Produs Specific
 ```python
