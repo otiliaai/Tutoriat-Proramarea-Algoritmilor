@@ -1,4 +1,4 @@
-`3# Probleme cu dicționare — Fișier Markdown complet
+# Probleme cu dicționare
 
 ## 1. Contor de cuvinte
 **Enunț:** Scrie un program care numără de câte ori apare fiecare cuvânt într-un text folosind un dicționar.
