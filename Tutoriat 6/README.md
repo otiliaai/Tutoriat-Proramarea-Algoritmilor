@@ -166,8 +166,6 @@ $$
 
 - căutare binară  
 - Mergesort  
-- algoritmul Strassen  
-- FFT  
 - selecția medianei (quickselect)  
 - probleme geometrice (cel mai apropiat cuplu de puncte)
 
@@ -182,7 +180,7 @@ Dacă încercăm să calculăm al $n$-lea termen Fibonacci recursiv:
 $$F(n) = F(n-1) + F(n-2)$$
 
 * **Problema:** Aceeași valoare este recalculată de nenumărate ori.
-* **Complexitate:** Devine **exponențială** ($O(2^n)$), ceea ce este inacceptabil pentru $n$ mare.
+* **Complexitate:** Devine **exponențială** $(O(2^n))$, ceea ce este inacceptabil pentru $n$ mare.
 * **Soluția:** Pentru probleme cu subprobleme suprapuse, se folosește **Programarea Dinamică**.
 
 > **Regulă de aur:** Divide et Impera este ideală când subproblemele sunt **disjuncte** (independente unele de altele).
@@ -225,7 +223,7 @@ Aici trebuie să sortăm **ambele** jumătăți, iar apoi să parcurgem elemente
     $$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$$
     * $a = 2$ (avem 2 subprobleme de rezolvat)
     * $b = 2$ (dimensiunea se înjumătățește)
-    * [cite_start]$f(n) = O(n)$ (interclasarea necesită parcurgerea listei)[cite: 260].
+    * $(f(n) = O(n))$ (interclasarea necesită parcurgerea listei).
 
 2.  **Aplicare Teorema Master:**
     * Calculăm exponentul critic: $\log_b a = \log_2 2 = 1$.
