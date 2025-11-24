@@ -1,6 +1,6 @@
-# PROBLEMA 1: Prelucrare Text
+## PROBLEMA 1: Prelucrare Text
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -9,7 +9,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale ($T$)
+##  Cerințe Funcționale ($T$)
 
 Programul citește mai întâi valoarea $T$ și apoi textul. Rezultatul se afișează la ieșirea standard (consolă).
 
@@ -24,14 +24,14 @@ Programul citește mai întâi valoarea $T$ și apoi textul. Rezultatul se afiș
 
 ---
 
-## 🔑 Restricții
+##  Restricții
 
 * Lungimea textului $\leq 1000$ caractere.  
 * Lungimea fiecărui cuvânt $\leq 50$ caractere.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 ### Exemplul 1: $T = 1$ (Listare)
 
@@ -53,9 +53,9 @@ Programul citește mai întâi valoarea $T$ și apoi textul. Rezultatul se afiș
 
 ---
 
-# 💻 PROBLEMA 2: Cuvinte cu Lungimi Egale
+##  PROBLEMA 2: Cuvinte cu Lungimi Egale
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -64,7 +64,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -72,13 +72,13 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 🔑 Restricții
+##  Restricții
 
 * Se afișează doar **prima pereche** întâlnită.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -87,9 +87,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 3: Cuvinte Prefixe
+##  PROBLEMA 3: Cuvinte Prefixe
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -98,7 +98,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -106,14 +106,14 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 🔑 Restricții
+##  Restricții
 
 * Un cuvânt **nu** este considerat prefix al lui însuși.  
 * Fiecare cuvânt se afișează o singură dată.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -122,9 +122,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 4: Decodare Text
+##  PROBLEMA 4: Decodare Text
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text codificat.
 
@@ -133,7 +133,7 @@ Se citește un text codificat.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Regula de decodificare | Ieșire la consolă |
 | :--- | :--- | :--- |
@@ -141,7 +141,7 @@ Se citește un text codificat.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -150,9 +150,9 @@ Se citește un text codificat.
 
 ---
 
-# 💻 PROBLEMA 5: Cuvinte 22
+##  PROBLEMA 5: Cuvinte 22
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text urmat de o literă.
 
@@ -162,7 +162,7 @@ Se citește un text urmat de o literă.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -170,7 +170,7 @@ Se citește un text urmat de o literă.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -179,9 +179,9 @@ Se citește un text urmat de o literă.
 
 ---
 
-# 💻 PROBLEMA 6: Cuvinte 1
+##  PROBLEMA 6: Cuvinte 1
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -190,7 +190,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -198,7 +198,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -206,9 +206,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 7: Poziții
+##  PROBLEMA 7: Poziții
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -217,7 +217,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -225,11 +225,11 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 🔑 Restricții
+##  Restricții
 
 * Începe numărarea cuvintelor de la 1 
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -237,9 +237,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 8: Cuvinte 21
+##  PROBLEMA 8: Cuvinte 21
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -249,7 +249,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -257,7 +257,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -265,9 +265,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 9: Vocale
+##  PROBLEMA 9: Vocale
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din litere și separatori.
 
@@ -276,7 +276,7 @@ Se citește un text compus din litere și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -284,7 +284,7 @@ Se citește un text compus din litere și separatori.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -292,9 +292,9 @@ Se citește un text compus din litere și separatori.
 
 ---
 
-# 💻 PROBLEMA 10: Cuvinte 2
+##  PROBLEMA 10: Cuvinte 2
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -304,7 +304,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -312,7 +312,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -320,9 +320,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 11: Inițiale
+##  PROBLEMA 11: Inițiale
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text compus din cuvinte și separatori.
 
@@ -331,7 +331,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -339,7 +339,7 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -347,9 +347,9 @@ Se citește un text compus din cuvinte și separatori.
 
 ---
 
-# 💻 PROBLEMA 12: ProSir
+##  PROBLEMA 12: ProSir
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește pe o linie un cuvânt $C$, iar pe următoarea linie textul $T$ de prelucrat.
 
@@ -359,7 +359,7 @@ Se citește pe o linie un cuvânt $C$, iar pe următoarea linie textul $T$ de pr
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -367,7 +367,7 @@ Se citește pe o linie un cuvânt $C$, iar pe următoarea linie textul $T$ de pr
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
@@ -375,9 +375,9 @@ Se citește pe o linie un cuvânt $C$, iar pe următoarea linie textul $T$ de pr
 
 ---
 
-# 💻 PROBLEMA 13: A1Z26 (Codificare)
+##  PROBLEMA 13: A1Z26 (Codificare)
 
-## 📝 Descriere și Reguli
+##  Descriere și Reguli
 
 Se citește un text care conține litere mari și mici, precum și separatori.
 
@@ -388,7 +388,7 @@ Se citește un text care conține litere mari și mici, precum și separatori.
 
 ---
 
-## ✨ Cerințe Funcționale
+##  Cerințe Funcționale
 
 | Operație cerută | Ieșire la consolă |
 | :--- | :--- |
@@ -396,7 +396,7 @@ Se citește un text care conține litere mari și mici, precum și separatori.
 
 ---
 
-## 💡 Exemple
+##  Exemple
 
 | Intrare | Ieșire |
 | :--- | :--- |
