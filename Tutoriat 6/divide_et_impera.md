@@ -1,103 +1,132 @@
 # Divide et Impera 
 
-
 ## 1. Conceptul de bază
 
-Divide et Impera este o tehnică de proiectare a algoritmilor construită
-pe următorii pași:
+Divide et Impera este o tehnică algoritmică bazată pe:
 
-1.  **Divide** --- Problema este împărțită în mai multe subprobleme de
-    același tip, de regulă de dimensiuni similare.
-2.  **Conquer** --- Subproblemele sunt rezolvate independent; dacă devin
-    suficient de mici, se rezolvă direct.
-3.  **Combine** --- Soluțiile subproblemelor sunt combinate pentru a
-    forma soluția finală.
-
-Această tehnică este în mod natural recursivă și eficientă atunci
-când: - subproblemele nu se suprapun, - divizarea reduce semnificativ
-dimensiunea problemei.
+1.  **Divide** --- împărțirea problemei în subprobleme similare.
+2.  **Conquer** --- rezolvarea subproblemelor (recursiv sau direct).
+3.  **Combine** --- combinarea soluțiilor pentru a obține rezultatul
+    final.
 
 ------------------------------------------------------------------------
 
-## 2. Forma generală a unui algoritm Divide et Impera
+## 2. Structura generală
 
-Pseudocodul standard este:
+``` text
+function DIVIMP(P):
+    if P este mică:
+        return soluție_directă(P)
 
-    function DIVIMP(P):
-        if P este suficient de mică:
-            return soluție_directă(P)
+    împarte P în P1, P2, ..., Pk
+    pentru fiecare Pi:
+        sol_i = DIVIMP(Pi)
 
-        împarte P în P1, P2, ..., Pk
-        soluții = []
-        pentru fiecare Pi:
-            soluții.append(DIVIMP(Pi))
-
-        return combină(soluții)
-
-Elemente importante: - „dimensiune mică" înseamnă adesea 1 element, 0
-elemente sau un prag fix. - operația de combinare depinde de problemă:
-poate fi o interclasare, o suma, un maxim etc.
+    return combină(sol_i)
+```
 
 ------------------------------------------------------------------------
 
 ## 3. Relațiile de recurență
 
-Complexitatea algoritmilor Divide et Impera este determinată prin:
+Complexitatea algoritmilor Divide et Impera se exprimă prin:
 
-\[ T(n) = a `\cdot `{=tex}T`\left`{=tex}(rac{n}{b}ight) + f(n) \]
+\[ T(n) = a
+`\cdot `{=tex}T`\left`{=tex}(`\frac{n}{b}`{=tex}`\right`{=tex}) + f(n)
+\]
 
-unde: - **a** = numărul subproblemelor, - **b** = factorul de împărțire
-al dimensiunii, - **f(n)** = costul divizării și combinării.
+unde:\
+- **a** = numărul subproblemelor\
+- **b** = factorul de împărțire\
+- **f(n)** = costul divizării + combinării
 
 ------------------------------------------------------------------------
 
 ## 4. Teorema Master
 
-Pentru recurența standard, se compară funcția ( f(n) ) cu (
-n\^{`\log`{=tex}\_b a} ):
+Comparam funcția ( f(n) ) cu termenul critic ( n\^{`\log`{=tex}\_b a} ):
 
--   **Caz 1:** dacă ( f(n) = O(n\^{c}) ) unde ( c \< `\log`{=tex}\_b a
-    ), atunci\
-    \[ T(n) = O(n\^{`\log`{=tex}\_b a}) \]
+### **Cazul 1** --- subdominant
 
--   **Caz 2:** dacă ( f(n) = `\Theta`{=tex}(n\^{`\log`{=tex}\_b a}) ),
-    atunci\
-    \[ T(n) = O(n\^{`\log`{=tex}\_b a} `\log `{=tex}n) \]
+Dacă\
+\[ f(n) = O`\left`{=tex}(n\^{c}`\right`{=tex}), `\quad `{=tex}c \<
+`\log`{=tex}\_b a, \]\
+atunci\
+\[ T(n) = O`\left`{=tex}(n\^{`\log`{=tex}\_b a}`\right`{=tex}) \]
 
--   **Caz 3:** dacă ( f(n) = `\Omega`{=tex}(n\^c) ) cu ( c \>
-    `\log`{=tex}\_b a ) și condiție de regularitate, atunci\
-    \[ T(n) = O(f(n)) \]
+### **Cazul 2** --- echilibru
+
+Dacă\
+\[ f(n) = `\Theta`{=tex}`\left`{=tex}(n\^{`\log`{=tex}\_b
+a}`\right`{=tex}), \]\
+atunci\
+\[ T(n) = O`\left`{=tex}(n\^{`\log`{=tex}\_b a}
+`\log `{=tex}n`\right`{=tex}) \]
+
+### **Cazul 3** --- dominant
+
+Dacă\
+\[ f(n) = `\Omega`{=tex}`\left`{=tex}(n\^c`\right`{=tex}),
+`\quad `{=tex}c \> `\log`{=tex}\_b a, \]\
+și există o constantă ( k \< 1 ) cu\
+\[ a `\cdot `{=tex}f`\left`{=tex}(`\frac{n}{b}`{=tex}`\right`{=tex})
+`\le `{=tex}k f(n), \]\
+atunci\
+\[ T(n) = O(f(n)) \]
 
 ------------------------------------------------------------------------
 
 ## 5. Proprietăți și avantaje
 
--   eficiență ridicată pentru probleme care se împart uniform și nu
-    produc subprobleme suprapuse;
--   permite optimizări avansate (ex.: folosirea unui prag pentru a
-    schimba la algoritmi iterativi);
--   structură recursivă naturală, ușor de implementat.
+-   foarte eficient pentru subprobleme **disjuncte și echilibrate**;\
+-   implementări naturale în recursivitate;\
+-   adesea produce complexități optime: ( O(n), O(n `\log `{=tex}n),
+    O(`\log `{=tex}n) ).
 
 ------------------------------------------------------------------------
 
-## 6. Aplicații clasice 
+## 6. Exemplu de problemă (nou)
 
--   algoritmi eficienți pentru găsirea minimului/miximului prin
-    comparări structurate;
--   multiplicarea rapidă a matricilor (ex. algoritmul lui Strassen);
--   transformări rapide (ex. FFT);
--   algoritmi geometrici (divide & conquer pentru determinarea cuplului
-    de puncte cele mai apropiate);
--   metode pentru determinarea elementelor statistice (ex. selecția
-    medianei utilizând tehnici de partiționare).
+### **Determinarea elementului maxim dintr-o listă prin Divide et Impera**
+
+**Idee:** împărțim lista în două jumătăți, găsim maximul în fiecare,
+apoi alegem maximul dintre cele două.
+
+### Pseudocod:
+
+    function MAXIM(A, st, dr):
+        if st == dr:
+            return A[st]
+
+        mij = (st + dr) // 2
+        max_st = MAXIM(A, st, mij)
+        max_dr = MAXIM(A, mij+1, dr)
+
+        return max(max_st, max_dr)
+
+### Recurența:
+
+\[ T(n) = 2T(n/2) + O(1) \]
+
+### Soluția (Master):
+
+-   ( a = 2 )
+-   ( b = 2 )
+-   ( f(n) = O(1) `\Rightarrow `{=tex}c = 0 )
+-   ( `\log`{=tex}\_b a = 1 )
+
+Cazul 1 ⇒\
+\[ T(n) = O(n) \]
 
 ------------------------------------------------------------------------
 
-## 7. Observații importante
+## 7. Aplicații clasice
 
--   dacă subproblemele nu sunt echilibrate sau se suprapun,
-    complexitatea poate deveni exponențială;
--   folosirea unei strategii bune de divizare (pivot, mediana medianelor
-    etc.) este crucială pentru performanță;
--   mulți algoritmi optimizați folosesc combinații între Divide et
-    Impera și tehnici iterative.
+-   căutare binară\
+-   Mergesort\
+-   algoritmul Strassen\
+-   FFT\
+-   selecția medianei (quickselect)\
+-   probleme geometrice (cel mai apropiat cuplu de puncte)
+
+------------------------------------------------------------------------
