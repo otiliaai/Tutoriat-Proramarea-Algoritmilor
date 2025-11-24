@@ -27,9 +27,11 @@ function DIVIMP(P):
 
 Complexitatea algoritmilor Divide et Impera se exprimă prin:
 
-\[
-T(n) = a \cdot T\left(\frac{n}{b}\right) + f(n)
-\]
+$$
+T(n) = a \cdot T(n/b) + f(n)
+$$
+
+
 
 unde:  
 - **a** = numărul subproblemelor  
@@ -40,44 +42,48 @@ unde:
 
 ## 4. Teorema Master
 
-Comparam funcția \( f(n) \) cu termenul critic \( n^{\log_b a} \):
+Comparam funcția $$ f(n) $$ cu termenul critic $$ n^{\log_b a} $$:
+
+
+### **Cazul 1** — subdominant
 
 ### **Cazul 1** — subdominant
 
 Dacă  
-\[
-f(n) = O(n^c), \quad c < \log_b a,
-\]  
+$$
+f(n) = O(n^c), \quad c < \log_b a
+$$
 atunci  
-\[
+$$
 T(n) = O(n^{\log_b a})
-\]
+$$
 
 ### **Cazul 2** — echilibru
 
 Dacă  
-\[
-f(n) = \Theta(n^{\log_b a}),
-\]  
+$$
+f(n) = \Theta(n^{\log_b a})
+$$
 atunci  
-\[
+$$
 T(n) = O(n^{\log_b a} \log n)
-\]
+$$
 
 ### **Cazul 3** — dominant
 
 Dacă  
-\[
-f(n) = \Omega(n^c), \quad c > \log_b a,
-\]  
+$$
+f(n) = \Omega(n^c), \quad c > \log_b a
+$$
 și există o constantă \( k < 1 \) cu  
-\[
-a \cdot f\left(\frac{n}{b}\right) \le k \cdot f(n),
-\]  
+$$
+a \cdot f\left(\frac{n}{b}\right) \le k \cdot f(n)
+$$
 atunci  
-\[
+$$
 T(n) = O(f(n))
-\]
+$$
+
 
 ------------------------------------------------------------------------
 
@@ -113,9 +119,10 @@ function MAXIM(A, st, dr):
 
 ### Recurența:
 
-\[
+$$
 T(n) = 2T(n/2) + O(1)
-\]
+$$
+
 
 ### Soluția (Master):
 
@@ -125,9 +132,9 @@ T(n) = 2T(n/2) + O(1)
 - \( \log_b a = 1 \)
 
 Cazul 1 ⇒  
-\[
+$$
 T(n) = O(n)
-\]
+$$
 
 ------------------------------------------------------------------------
 
