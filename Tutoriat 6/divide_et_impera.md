@@ -80,5 +80,48 @@ output:
 
 ```
 
+# 4. SumPrimDEI
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`, determinați suma elementelor prime din acest șir.
+
+## 💡 Exemplu
+input:
+
+```python
+6
+4 11 8 4 3 5 
+
+```
+
+output:
+
+```python
+19
+
+```
+
+# 5. CntImpare
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`,  determinați câte elemente impare sunt în acest șir.
+
+## 💡 Exemplu
+input:
+
+```python
+6
+4 1 8 4 3 5 
+
+```
+
+output:
+
+```python
+3
+
+```
+
+
+
+
 
 
