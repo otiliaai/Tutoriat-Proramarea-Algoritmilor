@@ -39,7 +39,7 @@ def divide_et_impera(t, st, dr):
 Complexitatea algoritmilor Divide et Impera se exprimă prin:
 
 $$
-T(n) = a \cdot T(n/b) + f(n)
+T(n) = a \cdot T\left(\frac{n}{b}\right) + f(n)
 $$
 
 
