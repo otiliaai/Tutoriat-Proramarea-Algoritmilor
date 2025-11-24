@@ -1,4 +1,5 @@
-# Divide et Impera ---
+# Divide et Impera 
+
 
 ## 1. Conceptul de bază
 
