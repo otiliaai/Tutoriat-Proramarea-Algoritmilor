@@ -140,6 +140,34 @@ NU
 
 ```
 
+# 6. MatrDivImp1
+
+Se consideră o matrice cu `m` linii și `n` coloane, numere naturale. Folosind metoda `Divide et Impera`, determinați suma numerelor pare din matrice.
+
+## Restricții și precizări
+
+* `1 ≤ m, n ≤ 100`
+* numerele din matrice vor fi mai mici decât `1.000.000`.
+
+
+```python
+3 5
+1 2 3 4 5
+2 4 6 1 7
+1 3 4 5 9
+
+```
+
+output:
+
+```python
+22
+
+```
+
+
+
+
 
 
 
