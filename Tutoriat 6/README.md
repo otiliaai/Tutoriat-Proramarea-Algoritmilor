@@ -253,6 +253,14 @@ Pentru a înțelege mai bine complexitatea, ne putem imagina execuția algoritmu
 | ... | ... | ... | ... |
 | **k** | $$a^k$$|$$O(1)$$|$$\Theta(n^{\log_b a})$$ |
 
+-----------------------------------------------------------------------------------------------
+
+<p align="center">
+  <img src="./arbore_recursiv.png" alt="Arbore de recursie" width="700">
+  <br>
+  <em>Figura 1: Exemplu concret - Arborele de execuție pentru calculul sumei (Divide et Impera)</em>
+</p>
+
 ---
 
 ### Interpretare: Cine "câștigă"?
