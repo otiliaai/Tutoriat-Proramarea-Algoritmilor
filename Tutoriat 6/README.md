@@ -95,7 +95,7 @@ $$
 
 ------------------------------------------------------------------------
 
-## 6. Exemplu de problemă (nou)
+## 6. Exemplu de problemă 
 
 ### **Determinarea elementului maxim dintr-o listă prin Divide et Impera**
 
@@ -161,24 +161,96 @@ $$
 - probleme geometrice (cel mai apropiat cuplu de puncte)
 
 ------------------------------------------------------------------------
-## 8. Implementare Python — Exemplu Divide et Impera
 
-Un exemplu simplu de implementare în Python pentru găsirea maximului:
+## 8. Când NU folosim Divide et Impera? 
 
-```python
-def maxim(A, st, dr):
-    if st == dr:
-        return A[st]
+Deși este o tehnică puternică, Divide et Impera **nu** este eficientă dacă subproblemele se suprapun (se repetă).
 
-    mij = (st + dr) // 2
-    max_st = maxim(A, st, mij)
-    max_dr = maxim(A, mij + 1, dr)
+### Exemplu clasic: Șirul lui Fibonacci
+Dacă încercăm să calculăm al $n$-lea termen Fibonacci recursiv:
+$$F(n) = F(n-1) + F(n-2)$$
 
-    return max(max_st, max_dr)
+* **Problema:** Aceeași valoare este recalculată de nenumărate ori.
+* **Complexitate:** Devine **exponențială** ($O(2^n)$), ceea ce este inacceptabil pentru $n$ mare.
+* **Soluția:** Pentru probleme cu subprobleme suprapuse, se folosește **Programarea Dinamică**.
 
+> **Regulă de aur:** Divide et Impera este ideală când subproblemele sunt **disjuncte** (independente unele de altele).
 
-# Exemplu de utilizare
-A = [5, 1, 8, 3, 10, 2]
-print(maxim(A, 0, len(A) - 1))
-```
+---
+
+## 9. Studii de Caz Avansate
+
+Să analizăm doi algoritmi fundamentali menționați în curs pentru a vedea cum se comportă diferit parametrii recurenței.
+
+### A. Căutarea Binară (Binary Search)
+*Algoritm care caută un element într-o listă sortată prin înjumătățire.*
+
+**Analiză:**
+La fiecare pas, comparăm mijlocul și alegem **o singură** jumătate în care să continuăm. Nu procesăm ambele jumătăți!.
+
+1.  **Recurența:**
+    $$T(n) = T\left(\frac{n}{2}\right) + O(1)$$
+    * $a = 1$ (rezolvăm o singură subproblemă)
+    * $b = 2$ (împărțim dimensiunea la 2)
+    * $f(n) = O(1)$ (cost constant de comparare)
+
+2.  **Aplicare Teorema Master:**
+    * Calculăm exponentul critic: $\log_b a = \log_2 1 = 0$.
+    * Avem $f(n) = O(1) = O(n^0)$.
+    * Suntem în cazul de **Echilibru** ($c = \log_b a$).
+
+**Rezultat:**
+$$T(n) = \Theta(n^0 \log n) = \Theta(\log n)$$
+
+---
+
+### B. Sortarea prin Interclasare (Merge Sort)
+*Algoritm care sortează două jumătăți recursiv și apoi le combină (interclasează).*
+
+**Analiză:**
+Aici trebuie să sortăm **ambele** jumătăți, iar apoi să parcurgem elementele pentru a le "uni" (interclasare).
+
+1.  **Recurența:**
+    $$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$$
+    * $a = 2$ (avem 2 subprobleme de rezolvat)
+    * $b = 2$ (dimensiunea se înjumătățește)
+    * [cite_start]$f(n) = O(n)$ (interclasarea necesită parcurgerea listei)[cite: 260].
+
+2.  **Aplicare Teorema Master:**
+    * Calculăm exponentul critic: $\log_b a = \log_2 2 = 1$.
+    * Avem $f(n) = O(n^1)$.
+    * Suntem din nou în cazul de **Echilibru** ($c = \log_b a$), deoarece $1 = 1$.
+
+**Rezultat:**
+$$T(n) = \Theta(n^1 \log n) = \Theta(n \log n)$$
+
+---
+
+## 10. Vizualizare: Arborele de Recursie
+
+Pentru a înțelege mai bine complexitatea, ne putem imagina execuția algoritmului ca un arbore, unde fiecare nod reprezintă o subproblemă, iar costul se distribuie astfel:
+
+1.  **Nivelul 0 (Rădăcina):** Problema inițială, cu costul $$f(n)$$.
+2.  **Nivelul 1:** $$a$$subprobleme, fiecare de mărime$$n/b$$, având costul total $$a \cdot f(n/b)$$.
+3.  **...** (procesul continuă până la dimensiunea 1)
+4.  **Ultimul nivel (Frunzele):** Cazurile de bază.
+
+### Structura costurilor pe nivel
+
+| Nivel | Nr. Noduri | Cost pe nod | Cost total pe nivel |
+| :--- | :--- | :--- | :--- |
+| **0** | $$1$$|$$f(n)$$|$$f(n)$$ |
+| **1** | $$a$$|$$f(n/b)$$|$$a \cdot f(n/b)$$ |
+| ... | ... | ... | ... |
+| **k** | $$a^k$$|$$O(1)$$|$$\Theta(n^{\log_b a})$$ |
+
+---
+
+### Interpretare: Cine "câștigă"?
+
+Suma costurilor pe fiecare nivel ne indică direct cazul din Teorema Master:
+
+*  **Dacă costul scade geometric** pe măsură ce coborâm în arbore $\rightarrow$ Costul total este dominat de **Rădăcină** (Cazul 3).
+*  **Dacă costul este constant** pe fiecare nivel $\rightarrow$ Costul total este $$CostNivel \times Înălțime$$ (Cazul 2).
+*  **Dacă costul crește geometric** spre bază $\rightarrow$ Costul total este dominat de **Frunze** (Cazul 1).
 
