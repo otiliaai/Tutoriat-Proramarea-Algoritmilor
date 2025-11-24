@@ -12,7 +12,7 @@ Divide et Impera este o tehnică algoritmică bazată pe:
 
 ## 2. Structura generală
 
-```text
+```python
 function DIVIMP(P):
     if P este mică:
         return soluție_directă(P)
@@ -42,58 +42,56 @@ unde:
 
 ## 4. Teorema Master
 
-Comparam funcția $$ f(n) $$ cu termenul critic $$ n^{\log_b a} $$:
 
 
-### **Cazul 1** — subdominant
+Comparăm funcția $f(n)$ cu termenul critic $n^{\log_b a}$.
 
-### **Cazul 1** — subdominant
+### **Cazul 1** — Subdominant
 
-Dacă  
+Dacă $f(n) = O(n^c)$ unde $c < \log_b a$, atunci:
+
 $$
-f(n) = O(n^c), \quad c < \log_b a
-$$
-atunci  
-$$
-T(n) = O(n^{\log_b a})
+T(n) = \Theta(n^{\log_b a})
 $$
 
-### **Cazul 2** — echilibru
 
-Dacă  
+
+### **Cazul 2** — Echilibru
+
+Dacă $f(n) = \Theta(n^{\log_b a})$, atunci:
+
 $$
-f(n) = \Theta(n^{\log_b a})
-$$
-atunci  
-$$
-T(n) = O(n^{\log_b a} \log n)
+T(n) = \Theta(n^{\log_b a} \log n)
 $$
 
-### **Cazul 3** — dominant
 
-Dacă  
-$$
-f(n) = \Omega(n^c), \quad c > \log_b a
-$$
-și există o constantă \( k < 1 \) cu  
+
+### **Cazul 3** — Dominant
+
+Dacă $f(n) = \Omega(n^c)$ unde $c > \log_b a$ și există o constantă $k < 1$ astfel încât:
+
 $$
 a \cdot f\left(\frac{n}{b}\right) \le k \cdot f(n)
 $$
-atunci  
+
+atunci:
+
 $$
-T(n) = O(f(n))
+T(n) = \Theta(f(n))
 $$
+
+
 
 
 ------------------------------------------------------------------------
 
 ## 5. Proprietăți și avantaje
 
-- foarte eficient pentru subprobleme **disjuncte și echilibrate**;  
-- implementări naturale în recursivitate;  
-- adesea produce complexități optime: \( O(n), O(n \log n), O(\log n) \).  
-- permite paralelizare evidentă datorită independenței subproblemelor;  
-- scalabilitate bună pentru inputuri mari.
+* **Eficiență:** Foarte eficient pentru subprobleme **disjuncte și echilibrate**.
+* **Simplitate:** Implementări naturale în recursivitate.
+* **Performanță:** Adesea produce complexități optime: $$O(n)$$, $$O(n \log n)$$, $$O(\log n)$$.
+* **Paralelizare:** Permite execuție simultană evidentă datorită independenței subproblemelor.
+* **Scalabilitate:** Comportament excelent pentru inputuri mari.
 
 ------------------------------------------------------------------------
 
@@ -105,7 +103,7 @@ $$
 
 ### Pseudocod:
 
-```text
+```python
 function MAXIM(A, st, dr):
     if st == dr:
         return A[st]
@@ -119,21 +117,36 @@ function MAXIM(A, st, dr):
 
 ### Recurența:
 
+### Exemplu 
+
+**$$T(n) = 2T\left(\frac{n}{2}\right) + O(1)$$**
+
+**1. Identificare parametri:**
+* $$a = 2$$
+* $$b = 2$$
+* $$f(n) = O(1) \implies n^c = n^0 \implies c = 0$$
+
+
+**2. Calculul exponentului critic:**
+
 $$
-T(n) = 2T(n/2) + O(1)
+\log_b a = \log_2 2 = 1
 $$
 
+**3. Comparație:**
 
-### Soluția (Master):
+Comparăm exponentul funcției ($c$) cu cel critic:
 
-- \( a = 2 \)  
-- \( b = 2 \)  
-- \( f(n) = O(1) \Rightarrow c = 0 \)  
-- \( \log_b a = 1 \)
-
-Cazul 1 ⇒  
 $$
-T(n) = O(n)
+c = 0 < 1 = \log_b a
+$$
+
+Deoarece $$c < \log_b a$$, ne aflăm în **Cazul 1 (Subdominant)**.
+
+**✅ Rezultat:**
+
+$$
+T(n) = \Theta(n^{\log_b a}) = \Theta(n^1) = \Theta(n)
 $$
 
 ------------------------------------------------------------------------
