@@ -231,7 +231,7 @@ $$T(n) = \Theta(n^1 \log n) = \Theta(n \log n)$$
 Pentru a înțelege mai bine complexitatea, ne putem imagina execuția algoritmului ca un arbore, unde fiecare nod reprezintă o subproblemă, iar costul se distribuie astfel:
 
 1.  **Nivelul 0 (Rădăcina):** Problema inițială, cu costul $$f(n)$$.
-2.  **Nivelul 1:** $$a$$subprobleme, fiecare de mărime$$n/b$$, având costul total $$a \cdot f(n/b)$$.
+2. **Nivelul 1:** Avem $a$ subprobleme, fiecare de dimensiune $\frac{n}{b}$, având costul total $a \cdot f\left(\frac{n}{b}\right)$.
 3.  **...** (procesul continuă până la dimensiunea 1)
 4.  **Ultimul nivel (Frunzele):** Cazurile de bază.
 
