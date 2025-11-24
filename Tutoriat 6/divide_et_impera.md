@@ -130,3 +130,32 @@ Cazul 1 ⇒\
 -   probleme geometrice (cel mai apropiat cuplu de puncte)
 
 ------------------------------------------------------------------------
+
+#PROBLEME
+
+# 1. NrXDivImp
+
+Folosind metoda **Divide et Impera**, scrieți funcția recursivă cu antetul:
+
+```cpp
+int NrXDivImp(int a[], int st, int dr, int x)
+```
+
+care primind ca parametri un vector `a` de numere întregi și trei numere întregi `st`, `dr` și `x`, returnează numărul de apariții ale numărului `x` în secvența `a[st], a[st+1], ..., a[dr]`.
+
+## ⚠️ Restricții și precizări
+
+* `st ≤ dr`
+* Numele funcției este **NrXDivImp**.
+* Vectorul `a` este indexat de la **1**.
+
+## 💡 Exemplu
+
+Dacă `a = (2, 5, 1, 5, 3, 5, 5, 5, 7, 6)`, atunci:
+
+* `NrXDivImp(a, 1, 6, 5)` returnează **3** (deoarece în secvența `2, 5, 1, 5, 3, 5` numărul `5` apare de `3` ori).
+* `NrXDivImp(a, 9, 10, 5)` returnează **0**.
+
+
+
+
