@@ -149,6 +149,7 @@ Se consideră o matrice cu `m` linii și `n` coloane, numere naturale. Folosind 
 * `1 ≤ m, n ≤ 100`
 * numerele din matrice vor fi mai mici decât `1.000.000`.
 
+intput: 
 
 ```python
 3 5
@@ -165,7 +166,54 @@ output:
 
 ```
 
+# 7. SumPareVec
 
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`, determinați suma elementelor pare din acest șir.
+
+## Restricții și precizări
+
+* `1 ≤ m, n ≤ 100`
+* numerele din matrice vor fi mai mici decât `1.000.000`.
+
+intput: 
+
+```python
+6
+4 1 8 4 3 5 
+
+```
+
+output:
+
+```python
+16
+
+```
+
+
+# 8. ExistaImpareDivImp
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera` să se verifice dacă în şir există elemente impare.
+
+## Restricții și precizări
+
+* `1 ≤ m, n ≤ 100`
+* numerele din matrice vor fi mai mici decât `1.000.000`.
+
+intput: 
+
+```python
+5
+2 8 6 10 8
+
+```
+
+output:
+
+```python
+NU
+
+```
 
 
 
