@@ -152,6 +152,132 @@ NU
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## 7. SumPareVec
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`, determinați suma elementelor pare din acest șir.
+
+## Restricții și precizări
+
+* `1 ≤ m, n ≤ 100`
+* numerele din matrice vor fi mai mici decât `1.000.000`
+
+intput: 
+
+```python
+6
+4 1 8 4 3 5 
+
+```
+
+output:
+
+```python
+16
+
+```
+
+## 8. VerifEgaleDivImp
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`, să se verifice dacă toate elementele vectorului sunt egale.
+
+## Restricții și precizări
+
+* `1 ≤ n ≤ 500`
+* fiecare element al vectorului va avea cel mult patru cifre
+
+intput: 
+
+```python
+7
+6 6 6 6 4 6 6 
+
+```
+
+output:
+
+```python
+NU
+
+```
+
+## 9. Maxim6
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`, determinați cel mai mare element din acest șir.
+
+## Restricții și precizări
+
+* `1 ≤ n ≤ 1000`
+* numerele din matrice vor fi mai mici decât `1.000.000`
+
+intput: 
+
+```python
+6
+4 1 8 4 3 5 
+
+```
+
+output:
+
+```python
+8
+
+```
+
+## 10. VerifNrParCifreDivImp
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`, să se verifice dacă toate elementele şirului au număr par de cifre.
+
+## Restricții și precizări
+
+* `1 ≤ n ≤ 100`
+* elementele şirului sunt numere naturale nenule cu cel mul 9 cifre
+
+intput: 
+
+```python
+5
+2820 82 65 1026 84
+
+```
+
+output:
+
+```python
+DA
+
+```
+
+## 11. Hanoi
+
+Turnurile din Hanoi este un joc matematic sau, dacă vreți, un puzzle. Este format din trei tije `A`, `B` și `C` și un număr variabil de discuri, de diferite diametre. Inițial discurile sunt așezate în ordine descrescătoare a diametrelor pe tija `A`, de la vârf către bază, astfel încât să formeze un turn.
+Scopul jocului este acela de a muta toate discurile de pe tija `A` pe tija `C` folosind ca tijă intermediară tija `B`, respectând următoarele reguli:
+
+* la un moment dat doar un singur disc poate fi mutat
+* fiecare mutare constă în luarea celui mai de sus disc de pe o tija și mutarea acestuia pe o altă tijă
+* un disc cu diametrul mai mare nu poate fi poziționat deasupra unui disc cu diametrul mai mic.
+
+
+Dacă se cunoaște numărul n de discuri aflate pe tija `A`, să se determine șirul mutărilor necesare pentru ca toate discurile să fie mutate pe tija `C`.
+
+Fișierul de ieșire `hanoi.out` va conține pe prima linie numărul `m`, ce reprezintă numărul minim de mutări ce se efectuează. Pe următoarele `m` linii vor fi scrise mutările sub forma: **tija sursă->tija destinație**.
+
+`hanoi.in`
+```python
+2
+
+```
+
+`hanoi.out`
+```python
+3
+A->B
+A->C
+B->C
+
+```
+
+
 
 
 
