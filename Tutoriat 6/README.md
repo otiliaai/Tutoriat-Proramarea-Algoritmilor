@@ -13,16 +13,27 @@ Divide et Impera este o tehnică algoritmică bazată pe:
 ## 2. Structura generală
 
 ```python
-function DIVIMP(P):
-    if P este mică:
-        return soluție_directă(P)
+def divide_et_impera(t, st, dr):
+    # 1. CAZ DE BAZĂ (Oprire)
+    # Verificăm dacă problema e suficient de mică pentru a fi rezolvată direct
+    if st == dr: 
+        return t[st]  # Sau altă rezolvare directă
 
-    împarte P în P1, P2, ..., Pk
-    pentru fiecare Pi:
-        sol_i = DIVIMP(Pi)
+    # 2. DIVIDE (Descompunere)
+    # Găsim punctul de separare (mijlocul)
+    mij = (st + dr) // 2
+    
+    # 3. IMPERA (Rezolvare recursivă)
+    # Apelăm funcția pentru cele două jumătăți
+    sol_stanga  = divide_et_impera(t, st, mij)
+    sol_dreapta = divide_et_impera(t, mij + 1, dr)
+    
+    # 4. COMBINĂ (Reconstituire)
+    # Unim rezultatele parțiale pentru a obține soluția finală
+    return combina(sol_stanga, sol_dreapta)
 
-    return combină(sol_i)
 ```
+
 ## 3. Relațiile de recurență
 
 Complexitatea algoritmilor Divide et Impera se exprimă prin:
