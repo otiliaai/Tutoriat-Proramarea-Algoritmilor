@@ -262,7 +262,7 @@ DA
 
 ```
 
-# 11. hanoi
+# 11. Hanoi
 
 Turnurile din Hanoi este un joc matematic sau, dacă vreți, un puzzle. Este format din trei tije `A`, `B` și `C` și un număr variabil de discuri, de diferite diametre. Inițial discurile sunt așezate în ordine descrescătoare a diametrelor pe tija `A`, de la vârf către bază, astfel încât să formeze un turn.
 Scopul jocului este acela de a muta toate discurile de pe tija `A` pe tija `C` folosind ca tijă intermediară tija `B`, respectând următoarele reguli:
