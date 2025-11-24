@@ -120,6 +120,27 @@ output:
 
 ```
 
+# 5. ExistaPrimeDivImp
+
+Se consideră un șir cu `n` elemente, numere naturale. Folosind metoda `Divide et Impera`,  să se verifice dacă în şir există elemente prime.
+
+## 💡 Exemplu
+input:
+
+```python
+5
+21 8 6 10 8
+
+```
+
+output:
+
+```python
+NU
+
+```
+
+
 
 
 
