@@ -34,7 +34,7 @@ def divide_et_impera(t, st, dr):
 
 ```
 
-## 3. Relațiile de recurență
+## 3. Relațiile de recurență - Teorema Master
 
 Complexitatea algoritmilor Divide et Impera se exprimă prin:
 
@@ -50,16 +50,11 @@ unde:
 - **f(n)** = costul divizării + combinării
 
 ------------------------------------------------------------------------
-
-## 4. Teorema Master
-
-
-
-Comparăm funcția $f(n)$ cu termenul critic $n^{\log_b a}$.
+Dacă $f(n) = O(n^c)$ :
 
 ### **Cazul 1** — Subdominant
 
-Dacă $f(n) = O(n^c)$ unde $c < \log_b a$, atunci:
+Dacă $c < \log_b a$, atunci:
 
 $$
 T(n) = \Theta(n^{\log_b a})
@@ -69,7 +64,7 @@ $$
 
 ### **Cazul 2** — Echilibru
 
-Dacă $f(n) = \Theta(n^{\log_b a})$, atunci:
+Dacă $c = \log_b a$, atunci:
 
 $$
 T(n) = \Theta(n^{\log_b a} \log n)
@@ -79,7 +74,7 @@ $$
 
 ### **Cazul 3** — Dominant
 
-Dacă $f(n) = \Omega(n^c)$ unde $c > \log_b a$ și există o constantă $k < 1$ astfel încât:
+Dacă $c > \log_b a$ și există o constantă $k < 1$ astfel încât:
 
 $$
 a \cdot f\left(\frac{n}{b}\right) \le k \cdot f(n)
@@ -92,11 +87,52 @@ T(n) = \Theta(f(n))
 $$
 
 
+ ---------------------------------------------------------------
+
+| Situație | Cine câștigă? | Cazul | Rezultat Final |
+| :--- | :--- | :--- | :--- |
+| **$$c < E$$** | **Frunzele** (baza arborelui) | **1** | $$T(n) = \Theta(n^E)$$ |
+| **$$c = E$$** | **Egalitate** (cost uniform) | **2** | $$T(n) = \Theta(n^E \log n)$$ |
+| **$$c > E$$** | **Rădăcina** (costul de sus) | **3** | $$T(n) = \Theta(f(n))$$ |
+
+----
+
+#### Exemplul 1: Cazul Subdominant (Frunzele câștigă)
+Recurența: $$T(n) = 4T(n/2) + n$$
+
+1.  **Parametri:** $$a=4$$, $$b=2$$, $$f(n) = n^1 \Rightarrow c=1$$.
+2.  **Exponent critic:** $$E = \log_2 4 = 2$$.
+3.  **Comparație:** $$c = 1 < 2 = E$$.
+4.  **Concluzie:** Câștigă termenul critic $$n^E$$.
+    $$T(n) = \Theta(n^2)$$
+
+----
+
+#### Exemplul 2: Cazul Echilibrat (Merge Sort)
+Recurența: $$T(n) = 2T(n/2) + n$$
+
+1.  **Parametri:** $$a=2$$, $$b=2$$, $$f(n) = n^1 \Rightarrow c=1$$.
+2.  **Exponent critic:** $$E = \log_2 2 = 1$$.
+3.  **Comparație:** $$c = 1 = 1 = E$$.
+4.  **Concluzie:** Sunt egale. Înmulțim cu $$\log n$$.
+    $$T(n) = \Theta(n^1 \log n) = \Theta(n \log n)$$
+
+----
+    
+
+#### Exemplul 3: Cazul Dominant (Rădăcina câștigă)
+Recurența: $$T(n) = T(n/2) + n^2$$
+
+1.  **Parametri:** $$a=1$$, $$b=2$$, $$f(n) = n^2 \Rightarrow c=2$$.
+2.  **Exponent critic:** $$E = \log_2 1 = 0$$.
+3.  **Comparație:** $$c = 2 > 0 = E$$.
+4.  **Concluzie:** Câștigă funcția $$f(n)$$.
+    $$T(n) = \Theta(n^2)$$
 
 
 ------------------------------------------------------------------------
 
-## 5. Proprietăți și avantaje
+## 4. Proprietăți și avantaje
 
 * **Eficiență:** Foarte eficient pentru subprobleme **disjuncte și echilibrate**.
 * **Simplitate:** Implementări naturale în recursivitate.
@@ -106,7 +142,7 @@ $$
 
 ------------------------------------------------------------------------
 
-## 6. Exemplu de problemă 
+## 5. Exemplu de problemă 
 
 ### **Determinarea elementului maxim dintr-o listă prin Divide et Impera**
 
@@ -162,7 +198,7 @@ $$
 
 ------------------------------------------------------------------------
 
-## 7. Aplicații clasice
+## 6. Aplicații clasice
 
 - căutare binară  
 - Mergesort  
@@ -171,7 +207,7 @@ $$
 
 ------------------------------------------------------------------------
 
-## 8. Când NU folosim Divide et Impera? 
+## 7. Când NU folosim Divide et Impera? 
 
 Deși este o tehnică puternică, Divide et Impera **nu** este eficientă dacă subproblemele se suprapun (se repetă).
 
@@ -187,9 +223,7 @@ $$F(n) = F(n-1) + F(n-2)$$
 
 ---
 
-## 9. Studii de Caz Avansate
-
-Să analizăm doi algoritmi fundamentali menționați în curs pentru a vedea cum se comportă diferit parametrii recurenței.
+## 8. Extra
 
 ### A. Căutarea Binară (Binary Search)
 *Algoritm care caută un element într-o listă sortată prin înjumătățire.*
@@ -235,7 +269,7 @@ $$T(n) = \Theta(n^1 \log n) = \Theta(n \log n)$$
 
 ---
 
-## 10. Vizualizare: Arborele de Recursie
+## 9. Vizualizare: Arborele de Recursie
 
 Pentru a înțelege mai bine complexitatea, ne putem imagina execuția algoritmului ca un arbore, unde fiecare nod reprezintă o subproblemă, iar costul se distribuie astfel:
 
@@ -256,9 +290,9 @@ Pentru a înțelege mai bine complexitatea, ne putem imagina execuția algoritmu
 -----------------------------------------------------------------------------------------------
 
 <p align="center">
-  <img src="./arbore_recursiv.png" alt="Arbore de recursie" width="700">
+  <img src="./arbore_recursie.png" alt="Arbore de recursie" width="700">
   <br>
-  <em>Figura 1: Exemplu concret - Arborele de execuție pentru calculul sumei (Divide et Impera)</em>
+  <em>Figura 1: Arborele de recursie</em>
 </p>
 
 ---
@@ -270,4 +304,39 @@ Suma costurilor pe fiecare nivel ne indică direct cazul din Teorema Master:
 *  **Dacă costul scade geometric** pe măsură ce coborâm în arbore $\rightarrow$ Costul total este dominat de **Rădăcină** (Cazul 3).
 *  **Dacă costul este constant** pe fiecare nivel $\rightarrow$ Costul total este $$CostNivel \times Înălțime$$ (Cazul 2).
 *  **Dacă costul crește geometric** spre bază $\rightarrow$ Costul total este dominat de **Frunze** (Cazul 1).
+
+
+
+## 📐 Formule Matematice Esențiale
+
+---
+
+### 1. Progresia Aritmetică (Bucle)
+
+Termenii cresc constant (cu o rație $$r$$).
+
+**Formula Sumei:** $S_n = \frac{n(a_1 + a_n)}{2}$
+
+* *Suma lui Gauss:*
+Suma numerelor de la $1$ la $n$ (unde $a_1=1, a_n=n$):
+
+$$
+\sum_{i=1}^{n} i = 1 + 2 + \dots + n = \frac{n(n+1)}{2} \in \Theta(n^2)
+$$
+
+---
+
+### 2. Progresia Geometrică (Recursivitate)
+
+Apare în **Divide et Impera** (Arborele de recursie).
+Termenii cresc/scad multiplicativ (cu o rație $$q$$).
+
+**Formula Sumei ($q \neq 1$):**
+
+$$
+S_n = a_1 \cdot \frac{q^n - 1}{q - 1}
+$$
+
+
+
 
