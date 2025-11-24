@@ -1,137 +1,4 @@
-# Divide et Impera 
-
-## 1. Conceptul de bază
-
-Divide et Impera este o tehnică algoritmică bazată pe:
-
-1.  **Divide** --- împărțirea problemei în subprobleme similare.
-2.  **Conquer** --- rezolvarea subproblemelor (recursiv sau direct).
-3.  **Combine** --- combinarea soluțiilor pentru a obține rezultatul
-    final.
-
-------------------------------------------------------------------------
-
-## 2. Structura generală
-
-``` text
-function DIVIMP(P):
-    if P este mică:
-        return soluție_directă(P)
-
-    împarte P în P1, P2, ..., Pk
-    pentru fiecare Pi:
-        sol_i = DIVIMP(Pi)
-
-    return combină(sol_i)
-```
-
-------------------------------------------------------------------------
-
-## 3. Relațiile de recurență
-
-Complexitatea algoritmilor Divide et Impera se exprimă prin:
-
-\[ T(n) = a
-`\cdot `{=tex}T`\left`{=tex}(`\frac{n}{b}`{=tex}`\right`{=tex}) + f(n)
-\]
-
-unde:\
-- **a** = numărul subproblemelor\
-- **b** = factorul de împărțire\
-- **f(n)** = costul divizării + combinării
-
-------------------------------------------------------------------------
-
-## 4. Teorema Master
-
-Comparam funcția ( f(n) ) cu termenul critic ( n\^{`\log`{=tex}\_b a} ):
-
-### **Cazul 1** --- subdominant
-
-Dacă\
-\[ f(n) = O`\left`{=tex}(n\^{c}`\right`{=tex}), `\quad `{=tex}c \<
-`\log`{=tex}\_b a, \]\
-atunci\
-\[ T(n) = O`\left`{=tex}(n\^{`\log`{=tex}\_b a}`\right`{=tex}) \]
-
-### **Cazul 2** --- echilibru
-
-Dacă\
-\[ f(n) = `\Theta`{=tex}`\left`{=tex}(n\^{`\log`{=tex}\_b
-a}`\right`{=tex}), \]\
-atunci\
-\[ T(n) = O`\left`{=tex}(n\^{`\log`{=tex}\_b a}
-`\log `{=tex}n`\right`{=tex}) \]
-
-### **Cazul 3** --- dominant
-
-Dacă\
-\[ f(n) = `\Omega`{=tex}`\left`{=tex}(n\^c`\right`{=tex}),
-`\quad `{=tex}c \> `\log`{=tex}\_b a, \]\
-și există o constantă ( k \< 1 ) cu\
-\[ a `\cdot `{=tex}f`\left`{=tex}(`\frac{n}{b}`{=tex}`\right`{=tex})
-`\le `{=tex}k f(n), \]\
-atunci\
-\[ T(n) = O(f(n)) \]
-
-------------------------------------------------------------------------
-
-## 5. Proprietăți și avantaje
-
--   foarte eficient pentru subprobleme **disjuncte și echilibrate**;\
--   implementări naturale în recursivitate;\
--   adesea produce complexități optime: ( O(n), O(n `\log `{=tex}n),
-    O(`\log `{=tex}n) ).
-
-------------------------------------------------------------------------
-
-## 6. Exemplu de problemă (nou)
-
-### **Determinarea elementului maxim dintr-o listă prin Divide et Impera**
-
-**Idee:** împărțim lista în două jumătăți, găsim maximul în fiecare,
-apoi alegem maximul dintre cele două.
-
-### Pseudocod:
-
-    function MAXIM(A, st, dr):
-        if st == dr:
-            return A[st]
-
-        mij = (st + dr) // 2
-        max_st = MAXIM(A, st, mij)
-        max_dr = MAXIM(A, mij+1, dr)
-
-        return max(max_st, max_dr)
-
-### Recurența:
-
-\[ T(n) = 2T(n/2) + O(1) \]
-
-### Soluția (Master):
-
--   ( a = 2 )
--   ( b = 2 )
--   ( f(n) = O(1) `\Rightarrow `{=tex}c = 0 )
--   ( `\log`{=tex}\_b a = 1 )
-
-Cazul 1 ⇒\
-\[ T(n) = O(n) \]
-
-------------------------------------------------------------------------
-
-## 7. Aplicații clasice
-
--   căutare binară\
--   Mergesort\
--   algoritmul Strassen\
--   FFT\
--   selecția medianei (quickselect)\
--   probleme geometrice (cel mai apropiat cuplu de puncte)
-
-------------------------------------------------------------------------
-
-#PROBLEME
+# PROBLEME
 
 # 1. NrXDivImp
 
@@ -155,6 +22,30 @@ Dacă `a = (2, 5, 1, 5, 3, 5, 5, 5, 7, 6)`, atunci:
 
 * `NrXDivImp(a, 1, 6, 5)` returnează **3** (deoarece în secvența `2, 5, 1, 5, 3, 5` numărul `5` apare de `3` ori).
 * `NrXDivImp(a, 9, 10, 5)` returnează **0**.
+
+
+# 2. AlternDivImp
+
+Folosind metoda Divide et Impera, scrieți funcția recursivă cu antetul:
+
+```cpp
+int AlternDivImp(int a[], int st, int dr)
+```
+care primind ca parametri un vector `a` de numere naturale și două numere întregi `st` și `dr`, returnează `1` dacă în secvența `a[st], a[st+1], ..., a[dr]` numerele impare alternează cu cele pare, sau returnează `0` dacă există cel puțin două numere alăturate de aceeași paritate.
+
+## ⚠️ Restricții și precizări
+
+* `st ≤ dr`
+* Numele funcției este **AlternDivImp**.
+* Vectorul `a` este indexat de la **1**.
+
+## 💡 Exemplu
+
+Dacă `a = (1,2,3,4,5,6,7,8,9,11)`, atunci :
+
+* `AlternDivImp(a, 1, 10) = 0`, deoarece numerele 9 și 11 aflate pe poziții alăturate au aceeași paritate
+* `AlternDivImp(a, 1, 8) = 1`
+
 
 
 
