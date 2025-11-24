@@ -22,6 +22,7 @@ function DIVIMP(P):
         sol_i = DIVIMP(Pi)
 
     return combină(sol_i)
+```
 ## 3. Relațiile de recurență
 
 Complexitatea algoritmilor Divide et Impera se exprimă prin:
@@ -108,6 +109,8 @@ function MAXIM(A, st, dr):
     max_dr = MAXIM(A, mij+1, dr)
 
     return max(max_st, max_dr)
+```
+
 ### Recurența:
 
 \[
@@ -157,4 +160,5 @@ def maxim(A, st, dr):
 # Exemplu de utilizare
 A = [5, 1, 8, 3, 10, 2]
 print(maxim(A, 0, len(A) - 1))
+```
 
