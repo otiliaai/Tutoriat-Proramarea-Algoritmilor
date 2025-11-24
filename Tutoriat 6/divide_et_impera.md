@@ -47,6 +47,38 @@ Dacă `a = (1,2,3,4,5,6,7,8,9,11)`, atunci :
 * `AlternDivImp(a, 1, 8) = 1`
 
 
+# 3. QuickSort
+
+Folosind metoda Divide et Impera, scrieți funcția recursivă cu antetul:
+
+```cpp
+void QuickSort(int a[], int st, int dr)
+
+```
+care primind ca parametri un vector `a` de numere întregi și două numere întregi `st` și `dr`, ordonează crescător elementele din secvența `a[st], a[st+1], ..., a[dr]` folosind algoritmul QuickSort.
+
+## ⚠️ Restricții și precizări
+
+* `st ≤ dr`
+* Numele funcției este **AlternDivImp**.
+* Vectorul `a` este indexat de la **1**.
+* Se va utiliza metoda de partiționare specifică algoritmului QuickSort.
+
+## 💡 Exemplu
+input:
+
+```python
+12
+10 0 -1 -3 1 -4 9 3 -1 -4 3 -4
+
+```
+
+output:
+
+```python
+-4 -4 -4 -3 -1 -1 0 1 3 3 9 10
+
+```
 
 
 
