@@ -3,7 +3,7 @@
 Folosind metoda **Divide et Impera**, scrieți funcția recursivă cu antetul:
 
 ```python
-int NrXDivImp(int a[], int st, int dr, int x)
+def NrXDivImp(a[], st, dr, x)
 ```
 
 care primind ca parametri un vector `a` de numere întregi și trei numere întregi `st`, `dr` și `x`, returnează numărul de apariții ale numărului `x` în secvența `a[st], a[st+1], ..., a[dr]`.
@@ -28,7 +28,7 @@ Dacă `a = (2, 5, 1, 5, 3, 5, 5, 5, 7, 6)`, atunci:
 Folosind metoda Divide et Impera, scrieți funcția recursivă cu antetul:
 
 ```python
-int AlternDivImp(int a[], int st, int dr)
+def AlternDivImp(a[], st, dr)
 ```
 care primind ca parametri un vector `a` de numere naturale și două numere întregi `st` și `dr`, returnează `1` dacă în secvența `a[st], a[st+1], ..., a[dr]` numerele impare alternează cu cele pare, sau returnează `0` dacă există cel puțin două numere alăturate de aceeași paritate.
 
@@ -53,7 +53,7 @@ Dacă `a = (1,2,3,4,5,6,7,8,9,11)`, atunci :
 Folosind metoda Divide et Impera, scrieți funcția recursivă cu antetul:
 
 ```python
-void QuickSort(int a[], int st, int dr)
+def QuickSort(a[], st, dr)
 
 ```
 care primind ca parametri un vector `a` de numere întregi și două numere întregi `st` și `dr`, ordonează crescător elementele din secvența `a[st], a[st+1], ..., a[dr]` folosind algoritmul QuickSort.
