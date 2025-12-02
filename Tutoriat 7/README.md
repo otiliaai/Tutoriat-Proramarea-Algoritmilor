@@ -21,6 +21,7 @@
 ### Problema 2 (2021)
 <img src="pb2-2021.png" width="600">
 
+**Fișier intrare: ``autori.in`**
 ```text
 3 7
 11 Ionescu Ion
@@ -41,6 +42,7 @@
 ### Problema 3 (2021)
 <img src="pb3-2021.png" width="600">
 
+**Fișier intrare: `catalog.in`**
 ```text
 5
 Ana Maria Pop 3
@@ -70,6 +72,7 @@ Fizica,10
 ### Problema 4 (2022)
 <img src="pb4-2022.png" width="600">
 
+**Fișier intrare: `cinema.in`**
 ```text
 Cinema 1 % Minionii 2 % 12:30 18:30
 Cinema 3 % Elfii cofetari % 10:30 12:30
