@@ -21,7 +21,7 @@
 ### Problema 2 (2021)
 <img src="pb2-2021.png" width="600">
 
-**Fișier intrare: ``autori.in`**
+**Fișier intrare: `autori.in`**
 ```text
 3 7
 11 Ionescu Ion
