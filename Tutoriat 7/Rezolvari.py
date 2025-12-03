@@ -71,39 +71,37 @@ else:
 
 
 # 2
-#subiectul 3 colocviu 2
-
-with open("input.txt") as f:
+with open("autori.in") as f:
+    autori={}
+    def sterge_carte(d,cod_carte):
+        for autor,carte in d.items():
+            if cod_carte in carte:
+                del d[autor][cod_carte]
+                return f"Cartea a fost scrisa de {autori[autor][0]} {autori[autor][1]}"
+        return "Cartea nu exista"
+    def carti_autor(d,cod_autor):
+        L=[]
+        L.append(autori[cod_autor][0]+' '+autori[cod_autor][1])
+        for _,informatii in d[cod_autor].items():
+            L.append((informatii[2],informatii[0],informatii[1]))
+        return L
     d={}
-    for line in f:
-        p1,p2,culoare, eticheta=line.split(maxsplit=3)
-        p1=tuple(int(x) for x in p1.strip("[]").split(","))
-        p2=tuple(int(x) for x in p2.strip("[]").split(","))
-        info_leg=culoare, eticheta.strip()
-        if p1 not in d:
-            d[p1]={}
-        d[p1][p2]=info_leg
-print(d)
-
-#b)
-
-def insereaza_legatura(d,t1,t2,culoare,eticheta):
-    if t1 in d and t2 in d[t1]:
-        return False
-    info=culoare, eticheta
-    if t1 not in d:
-        d[t1]={}
-    d[t1][t2]=info
-
-    return True
-
-if insereaza_legatura(d,(1,2), (1,3), "albastru", "legatura 2")==True:
-    print(d)
-else:
-    print("legatura deja exista")
-
-
-
+    m,n=[int(aux) for aux in f.readline().split()]
+    for _ in range(m):
+        cod_autor,nume,prenume=[aux for aux in f.readline().strip().split()]
+        d[cod_autor]={}
+        autori[cod_autor]=[nume,prenume]
+    for _ in range(n):
+        cod_autor,cod_carte,an_aparitie,nr_pagini,titlu=[aux for aux in f.readline().strip().split(maxsplit=4)]
+        d[cod_autor][cod_carte]=[an_aparitie,nr_pagini,titlu]
+    # print(d)
+    # fct=sterge_carte(d,"111")
+    # if fct != "Cartea nu exista":
+    #     print(fct)
+    #     print(d)
+    L=carti_autor(d,"11")
+    for linie in L:
+        print(linie)
 
 
 
@@ -120,8 +118,6 @@ n = int(linii[0].strip())
 idx = 1
 
 for i in range(n):
-    # Linia cu Nume si nr materii
-    # Trebuie sa luam ultimul element ca numar, restul e numele
     rand = linii[idx].strip().rsplit(' ', 1)
     nume = rand[0]
     nr_materii = int(rand[1])
@@ -132,7 +128,6 @@ for i in range(n):
     for j in range(nr_materii):
         parti = linii[idx].strip().split(',')
         materie = parti[0]
-        # Restul sunt notele, le transformam in int
         note = [int(x) for x in parti[1:]]
         d[nume][materie] = note
         idx += 1
@@ -151,7 +146,6 @@ def detalii_elev(d, nume):
     for materie in materii_elev:
         note = materii_elev[materie]
 
-        # Verificam corigenta
         if 0 in note:
             medie = 0
         else:
@@ -170,7 +164,7 @@ def detalii_elev(d, nume):
 
 
 # Testare b
-nume_citit = "Ana Maria Pop"  # Poti pune input() aici
+nume_citit = "Ana Maria Pop"  
 rez = detalii_elev(d, nume_citit)
 print(rez)
 
@@ -252,6 +246,7 @@ def cinema_film (d,*numecinema,ora_minima,ora_maxima):
     return sol
 
 print(cinema_film (d,'Cinema 1','Cinema 2',ora_minima="14:00",ora_maxima="22:00"))
+
 
 
 
