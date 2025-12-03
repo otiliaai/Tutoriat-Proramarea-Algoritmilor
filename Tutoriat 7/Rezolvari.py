@@ -1,76 +1,4 @@
 # 1
-#subiectul 3 colocviu 01
-
-#a)
-with open("input.txt") as f:
-    m,n=f.readline().split(maxsplit=1)
-    d={}
-    for _ in range(int(m)):
-        aux=f.readline().split(maxsplit=1)
-        id_autor=int(aux[0])
-        nume_autor=aux[1].rstrip("\n")
-
-        d[id_autor]=[nume_autor,{}]
-
-    for _ in range(int(n)):
-        aux=f.readline().split(maxsplit=4)
-        id_autor=int(aux[0])
-        cod_carte=int(aux[1])
-        an=int(aux[2])
-        nr_pag=int(aux[3])
-        nume_carte=aux[4].rstrip("\n")
-
-        info_carte=an,nr_pag,nume_carte
-
-        d[id_autor][1][cod_carte]=info_carte
-
-print(d,sep="\n\n")
-
-#b)
-
-def sterge_carte(d,cod):
-    for autor in d:
-        if cod in d[autor][1]:
-            del d[autor][1][cod]
-            return d[autor][0]
-        else:
-            return None
-
-cod=int(input("cod= "))
-
-autor=sterge_carte(d,cod)
-if autor!=None:
-    print(f"Cartea este scr")
-
-#c)
-
-def carti_autor(d, id_autor):
-    if id_autor not in d:
-        return None
-    else:
-        autor=d[id_autor][0]
-        carti=sorted([carte for carte in d[id_autor][1].values()], key=lambda x: (x[0], -x[1], x[2]))
-
-    return autor, carti
-
-id_autor =int(input("id_autor=  "))
-
-date=carti_autor(d, id_autor)
-
-if date==None:
-    print("cod incorect")
-else:
-    print(date[0])
-    for carte in date[1]:
-        print(f"{carte[2]} { carte[0]} {carte[1]}")
-
-
-
-
-
-
-
-# 2
 with open("autori.in") as f:
     autori={}
     def sterge_carte(d,cod_carte):
@@ -103,6 +31,123 @@ with open("autori.in") as f:
     for linie in L:
         print(linie)
 
+
+
+
+
+
+# 2
+# v1
+
+with open("input.txt") as f:
+    d={}
+    for line in f:
+        p1,p2,culoare, eticheta=line.split(maxsplit=3)
+        p1=tuple(int(x) for x in p1.strip("[]").split(","))
+        p2=tuple(int(x) for x in p2.strip("[]").split(","))
+        info_leg=culoare, eticheta.strip()
+        if p1 not in d:
+            d[p1]={}
+        d[p1][p2]=info_leg
+print(d)
+
+#b)
+
+def insereaza_legatura(d,t1,t2,culoare,eticheta):
+    if t1 in d and t2 in d[t1]:
+        return False
+    info=culoare, eticheta
+    if t1 not in d:
+        d[t1]={}
+    d[t1][t2]=info
+
+    return True
+
+if insereaza_legatura(d,(1,2), (1,3), "albastru", "legatura 2")==True:
+    print(d)
+else:
+    print("legatura deja exista")
+
+
+
+# v2
+# a) Citire
+f = open("legaturi.in")
+lista = [] #
+for linie in f:
+    linie = linie.strip()
+    parti = linie.split('] [')
+    
+    p1_str = parti[0].replace('[', '')
+    rest = parti[1].split(']')
+    p2_str = rest[0]
+    
+    detalii = rest[1].strip().split(' ', 1)
+    
+    x1, y1 = p1_str.split(',')
+    p1 = (int(x1), int(y1))
+    
+    x2, y2 = p2_str.split(',')
+    p2 = (int(x2), int(y2))
+    
+    d = {
+        'p1': p1,
+        'p2': p2,
+        'culoare': detalii[0],
+        'eticheta': detalii[1]
+    }
+    lista.append(d)
+f.close()
+
+# b) Inserare legatura
+def insereaza_legatura(lista, p1, p2, culoare, eticheta):
+    gasit = 0
+    for elem in lista:
+        if (elem['p1'] == p1 and elem['p2'] == p2) or 
+           (elem['p1'] == p2 and elem['p2'] == p1):
+            gasit = 1
+            break
+            
+    if gasit == 0:
+        d_nou = {'p1': p1, 'p2': p2, 'culoare': culoare, 'eticheta': eticheta}
+        lista.append(d_nou)
+        return True
+    return False
+
+# Testare b
+print(insereaza_legatura(lista, (1,3), (2,7), "negru", "legatura noua"))
+# print(lista) 
+
+# c) Vecini comuni
+def vecini(lista, *puncte):
+    toate_pct = set()
+    for elem in lista:
+        toate_pct.add(elem['p1'])
+        toate_pct.add(elem['p2'])
+        
+    sol = []
+    for candidat in toate_pct:
+        e_vecin_cu_toti = 1
+        
+        for p_target in puncte:
+            legatura_exista = 0
+            for elem in lista:
+                s = {elem['p1'], elem['p2']}
+                if candidat in s and p_target in s and candidat != p_target:
+                    legatura_exista = 1
+                    break
+            if legatura_exista == 0:
+                e_vecin_cu_toti = 0
+                break
+        
+        if e_vecin_cu_toti == 1:
+            sol.append(candidat)
+            
+    sol.sort(key=lambda p: p[1], reverse=True)
+    return sol
+
+# Testare c
+print(vecini(lista, (2,7), (1,2)))
 
 
 
@@ -246,6 +291,7 @@ def cinema_film (d,*numecinema,ora_minima,ora_maxima):
     return sol
 
 print(cinema_film (d,'Cinema 1','Cinema 2',ora_minima="14:00",ora_maxima="22:00"))
+
 
 
 
