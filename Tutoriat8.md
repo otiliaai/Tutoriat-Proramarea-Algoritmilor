@@ -213,3 +213,81 @@ Programul va afișa: Un singur număr real (cu 3 zecimale), reprezentând suma m
 *Runda 1* : Iese un singur adversar cu valoarea `6`. Număr participanți `K=3`. Scor: `6 / 3 = 2`.
 Rămân `2` participanți (1 adversar + Vasile).
 *Runda 2* : Iese ultimul adversar cu valoarea `6`. Număr participanți `K=2`. Scor: `6 / 2 = 3`.Total: `2 + 3 = 5`.
+
+------------------------------------------------------------------------
+
+## Problema 10
+
+Canalul Pythonic Way este foarte strâmt, având o serie de nuferi așezați liniar, numerotați de la `1` la `n`. Pe fiecare nufăr cu indicele `i` este scris un număr natural nenul `k`, care reprezintă puterea de salt a broscuței de pe acel nufăr.Mai exact, de pe nufărul `i` având valoarea `k`, broscuța poate sări pe oricare dintre nuferii cu indicii `i+1`, `i+2`, ..., `i+k`.Broscuța Lily vrea să plece de pe primul nufăr (indice `1`) și să ajungă pe ultimul nufăr (indice `n`) efectuând un număr minim de sărituri.Scrieți un program Python care determină și afișează un astfel de traseu minim.
+Dacă există mai multe trasee cu număr minim de sărituri, se poate afișa oricare dintre ele.Broscuța se oprește imediat ce a ajuns pe ultimul nufăr.
+
+De la tastatură se citesc, separate prin spațiu, numerele naturale scrise pe cei `n` nuferi (în ordinea de la `1` la `n`).
+(Notă: Numărul total de nuferi `n` se deduce din numărul de valori citite).
+
+Programul va afișa pe ecran indicii nuferilor pe care sare Lily pentru a ajunge de la început la sfârșit, separați prin câte un spațiu. Traseul trebuie să includă nufărul de start (`1`) și nufărul de final (`n`).
+
+**Intrare**
+```
+2 3 1 5 3 2 2 5
+```
+
+**Ieșire**
+```
+1 2 4 8
+```
+
+*(Sau o altă variantă validă, de exemplu: `1 3 4 8`, deoarece de pe nufărul `1` se poate sări și pe `2`, și pe `3`, iar de pe ambele se poate ajunge optim la destinație).*
+
+**Explicație:** Avem `n=8` nuferi cu valorile:
+Nufăr `1` (valoare `2`): poate sări la `2`, `3`.
+Nufăr `2` (valoare `3`): poate sări la `3`, `4`, `5`.
+Nufăr `4` (valoare `5`): poate sări la `5`, `6`, `7`, `8`, `9`.
+Lily alege traseul $1 \to 2 \to 4 \to 8$ 
+Total sărituri: 3 (minim posibil).
+
+------------------------------------------------------------------------
+
+## Problema 11
+
+O balanță veche s-a defectat și acum se echilibrează nu doar pentru două obiecte având aceeași greutate, ci pentru orice două obiecte cu proprietatea că modulul diferenței dintre greutățile lor este mai mic sau egal decât un număr real `g`.
+Scrieți un program Python care citește de la tastatură:
+1.Un număr natural `n` (numărul de obiecte).
+2.Un număr real `g` (toleranța balanței).
+3.Greutățile celor `n` obiecte (numere reale strict pozitive).
+
+Programul va afișa pe ecran numărul maxim de perechi de obiecte care echilibrează balanța defectă, precum și perechile respective.
+Orice obiect poate să facă parte din cel mult o pereche.
+Fiecare pereche afișată trebuie să fie de forma `x + y`, unde `x` și `y` sunt numerele de ordine ale celor două obiecte (indexate de la 1).
+Nu contează ordinea afișării perechilor sau ordinea numerelor în cadrul unei perechi.
+
+De la tastatură se citesc: un număr natural `n`, un număr real `g` si o secvență de `n` numere reale reprezentând greutățile.
+
+Programul va afișa:
+Pe prima linie: Numărul maxim de perechi formate.
+Pe următoarele linii: Perechile de indici în formatul `x + y`.
+
+**Intrare**
+```
+10
+8.5
+21.25
+12
+6.05
+20.7
+23.8
+22
+33.25
+21
+48.15
+62.20
+```
+
+**Ieșire**
+```
+3
+3 + 2
+10 + 4
+1 + 8
+```
+
+**Explicație:** Avem $n = 10$ și $g = 8.5$. Se pot forma maxim 3 perechi de obiecte care pot echilibra balanța defectă. Soluția nu este unică, o altă soluție corectă obținându-se, de exemplu, înlocuind perechea $1 + 6$ cu perechea $1 + 5$ (în contextul unei alte variante de grupare).
