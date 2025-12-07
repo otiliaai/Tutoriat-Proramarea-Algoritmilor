@@ -6,16 +6,16 @@ Se dă un șir cu `n` numere întregi. Determinați cel mai mare număr care
 poate fi obținut ca produs al două elemente ale șirului.
 
 **Intrare**
-```
 python
-    7
-    -8 3 9 -1 -2 7 -10
+```
+7
+-8 3 9 -1 -2 7 -10
 
 ```
 **Ieșire**
+python
 
 ```
-python
 
 80
 
@@ -31,8 +31,8 @@ moment dat. Determinați numărul maxim de mașini ce pot fi reparate
 într-un timp total `T`.
 
 **masini.in**
-```
 python
+```
     5 10
     6 2 4 8 2
 ```
