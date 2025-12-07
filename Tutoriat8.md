@@ -135,3 +135,81 @@ B = [7, 8, −5, 2, −4, −1, 5]
 97
 ```
 **Explicație:** Suma maximă pe care o poate obține Gigel este 97 = 3*5 + (−2)*(−5) + 5*8 + (−1)*(−4) + 4*7.
+
+------------------------------------------------------------------------
+
+## Problema 7
+
+Considerăm `n` găleți pline cu apă. Acestea au o proprietate specială: capacitatea oricărei găleți (cu excepția celei cu capacitate minimă) este strict mai mare decât suma capacităților tuturor găleților mai mici decât ea.Se dă un bazin cu o capacitate `C`. Scrieți un program Python care determină ce găleți trebuie deșertate în bazin pentru a-l umple complet (exact la capacitatea `C`). Dacă acest lucru nu este posibil, se va afișa un mesaj corespunzător.
+
+De la tastatură se citesc: o listă cu numere naturale nenule, reprezentând capacitățile celor `n` găleți si un număr natural nenul `C`, reprezentând capacitatea bazinului.
+
+Programul va afișa: capacitățile găleților care, însumate, dau exact valoarea `C` sau un mesaj corespunzător (ex: "Nu este posibil") dacă bazinul nu poate fi umplut complet folosind gălețile date.
+
+**Intrare**
+```
+30 6 62 5 133 14
+153
+```
+
+**Ieșire**
+```
+14 6 133
+```
+------------------------------------------------------------------------
+
+## Problema 8
+
+În vitrina magazinului CheapLuxury, bijuteriile sunt așezate pe o matrice cu `m` rânduri și `n` coloane (`m>2`, `n>2`). Hoțul Gicuță vrea să fure câte o singură bijuterie de pe fiecare dintre cele `m` rânduri, astfel încât:
+*1.* Valoarea totală a bijuteriilor furate să fie maximă.
+*2.* Să respecte o regulă de "lăcomie": valoarea bijuteriei de pe rândul curent trebuie să fie strict mai mare decât valoarea bijuteriei furate de pe rândul precedent.
+Scrieți un program Python care determină suma totală maximă și pozițiile bijuteriilor alese, respectând condițiile.(Notă: Pentru a maximiza suma totală respectând lanțul crescător de sus în jos, o strategie Greedy eficientă este adesea abordarea problemei în sens invers, de la ultimul rând spre primul).
+
+**Intrare**
+```
+4 3
+515.99 350.79 731.25
+299.99 515.88 766.10
+566.25 271.99 444.89
+865.99 918.55 799.99
+```
+
+**Ieșire**
+```
+2351.47
+1 2
+2 2
+3 1
+4 2
+```
+
+------------------------------------------------------------------------
+
+## Problema 9
+
+Se organizează un concurs de trivia în Python la care participă Nea Vasile și alți `N` oameni. Fiecărui concurent i se asociază o valoare strict pozitivă $X_i$, cu excepția lui Vasile care are valoarea `0` (fiind subestimat).
+Concursul are mai multe runde eliminatorii. Într-o rundă cu `K` participanți (inclusiv Vasile), sunt eliminați cei care greșesc, iar scorul rundei este:
+
+$$ \text{Scor} = \frac{\text{Suma valorilor } X_i \text{ ale celor eliminați}}{K} $$
+
+Câștigătorul primește suma scorurilor tuturor rundelor. Știind că Nea Vasile nu poate pierde și va rămâne singurul câștigător, el vrea să maximizeze câștigul total.Scrieți un program Python care determină suma maximă de bani pe care o poate câștiga Nea Vasile.
+
+De la tastatură se citesc: un număr natural nenul `N`, reprezentând numărul de concurenți (fără Nea Vasile) si cele `N` numere strict pozitive asociate celor `N` participanți (separate prin spațiu).
+
+Programul va afișa: Un singur număr real (cu 3 zecimale), reprezentând suma maximă de bani pe care o poate câștiga Nea Vasile.
+
+**Intrare**
+```
+2
+6 6
+```
+
+**Ieșire**
+```
+5
+```
+
+**Explicație:** Suma maximă este `5 = 2 + 3`. La început sunt `3` participanți (`N=2` adversari + Vasile).
+*Runda 1* : Iese un singur adversar cu valoarea `6`. Număr participanți `K=3`. Scor: `6 / 3 = 2`.
+Rămân `2` participanți (1 adversar + Vasile).
+*Runda 2* : Iese ultimul adversar cu valoarea `6`. Număr participanți `K=2`. Scor: `6 / 2 = 3`.Total: `2 + 3 = 5`.
