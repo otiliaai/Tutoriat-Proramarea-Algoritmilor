@@ -6,19 +6,16 @@ Se dă un șir cu `n` numere întregi. Determinați cel mai mare număr care
 poate fi obținut ca produs al două elemente ale șirului.
 
 **Intrare**
-python
+
 ```
 7
 -8 3 9 -1 -2 7 -10
 
 ```
 **Ieșire**
-python
 
 ```
-
 80
-
 ```
 
 ------------------------------------------------------------------------
@@ -31,15 +28,110 @@ moment dat. Determinați numărul maxim de mașini ce pot fi reparate
 într-un timp total `T`.
 
 **masini.in**
-python
 ```
-    5 10
-    6 2 4 8 2
+5 10
+6 2 4 8 2
 ```
 
 **masini.out**
+
 ```
-python
-    3
+3
 ```
 **Explicație:** Se repară mașinile cu timpii 2, 4 și 2.
+
+------------------------------------------------------------------------
+
+## Problema 3
+
+Moș Crăciun pregătește cadourile pentru acest an. El cunoaște prețurile a `n` cadouri și are la dispoziție o sumă de bani `S`. Ajutați-l să aleagă un număr maxim de cadouri a căror preț total să nu depășească `S` și determinați suma minimă de care mai are nevoie Moș Crăciun pentru a cumpăra încă un cadou.
+
+Programul citește de la tastatură numerele `n` `S`, iar apoi `n` numere naturale, reprezentând prețurile cadourilor.
+
+Programul va afișa pe ecran două numere, `k` `p`, separate printr-un spațiu, reprezentând numărul maxim de cadouri pe care le poate cumpăra Moș Crăciun și suma minimă de care mai are nevoie pentru a cumpăra încă un cadou.
+
+**Intrare**
+
+```
+5 10
+7 2 6 4 3
+```
+
+**Ieșire**
+```
+3 5
+```
+**Explicație:** Cu suma dată Moș Crăciun va cumpăra trei cadouri, cele cu prețurile `2` `4` `3`. Mai are nevoie de încă `5` (bani) ppentru a putea cumăra și cadoul cu prețul `6`.
+
+
+------------------------------------------------------------------------
+
+## Problema 4
+
+La un birou care se ocupă cu analiza proiectelor de investiţii, `n` investitori au depus până la termenul legal, câte un proiect.
+Cunoscând timpul necesar pentru analizarea fiecărui proiect, scrieţi un program care determină ordinea în care vor fi analizate proiectele, astfel încât timpul mediu de aşteptare pentru investitori să fie minim.
+
+Pe prima linie a fişierului `proiecte.in` se găseşte un număr natural `n` reprezentând numărul de proiecte depuse.
+
+Pe linia a doua, separate prin câte un spaţiu, se găsesc n numere naturale `t1`, `t2`, …, `tn`, reprezentând timpii necesari pentru analizarea fiecărui proiect.
+
+Pe prima linie a fişierului `proiecte.out` se vor găsi n numere naturale cuprinse între 1 şi n, reprezentând ordinea în care vor fi analizate proiectele.
+
+
+**proiecte.in**
+```
+5
+60 50 30 10 40 
+```
+
+**proiecte.out**
+
+```
+4 3 5 2 1
+```
+**Explicație:** `4` `3` `5` `2` `1` este ordinea de analizare a proiectelor. Numerele de ordine ale proiectelor sunt date de ordinea numerelor de pe linia a doua din fişierul de intrare.
+
+
+------------------------------------------------------------------------
+
+## Problema 5
+
+Pentru cadourile pe care Moş Crăciun urmează să le cumpere copiilor cuminţi, Consiliul Polului Nord a alocat suma de `S` eureni. Ştiind că în comerţul polar se utilizează `n+1` tipuri de bancnote de valori `1`, `e^1`, `e^2`, `e^3`,…, `e^n` şi faptul că Moşul trebuie să primească un număr minim de bancnote pentru suma aprobată, să se determine numărul de bancnote din fiecare tip utilizat în plata sumei şi numărul total de bancnote care i s-au alocat.
+
+Fișierul de intrare `eureni.in` conține pe prima linie numerele naturale `S` `n` `e`.
+
+Fișierul de ieșire `eureni.out` va conține mai multe linii: pe fiecare linie va fi scrisă valoare unei bancnote folosită în plata sumei `S` și numărul de bancnote folosite, separate printr-un spațiu, în ordinea descrescătoare a valorilor bancnotelor folosite. Pe ultima linie se va scrie numai numărul total de bancnote folosite.
+
+**eureni.in**
+```
+107 4 5
+```
+
+**eureni.out**
+
+```
+25 4
+5 1
+1 2
+7
+```
+**Explicație:** Sunt `5` tipuri de bancnote, cu valorile: `1`, `5`, `25`, `125`, `625` eureni. Pentru a plăti suma de `107` eureni se folosesc `4` bancnote de `25` eureni, `1` bancnotă de `5` eureni și `2` bancnote de `1` euren, în total `7` bancnote.
+
+------------------------------------------------------------------------
+
+## Problema 6
+
+
+Gigel tocmai a învățat la școală adunarea și înmulțirea numerelor întregi. Pentru a-l ajuta pe Gigel să-și fixeze cunoștințele proaspăt dobândite, precum și pentru a-i testa istețimea algoritmică, bunicul său a scris pe mai multe cartonașe numere întregi nenule și apoi le-a împărțit în două grămezi: o grămadă `A` formată din `m` cartonașe și o grămadă `B` formată din `n` cartonașe (`1 ≤ m ≤ n ≤ 100000`). Sarcina lui Gigel este să selecteze din grămada `B` exact `m` cartonașe pe care apoi să le împerecheze, în orice ordine dorește el, cu cele `m` cartonașe din grămada `A` astfel încât prin însumarea produselor celor două numere scrise pe fiecare pereche de cartonașe să obțină cea mai mare sumă posibilă. Scrieți un program Python care citește de la tastatură valorile scrise pe cartonașele din cele două grămezi și afișează pe ecran cea mai mare sumă pe care o poate obține Gigel respectând restricțiile indicate în enunțul problemei, precum și o modalitate de obținere a sa în forma indicată în exemplu.
+
+**Intrare**
+```
+A = [3, −2, 5, −1, 4]
+B = [7, 8, −5, 2, −4, −1, 5]
+```
+
+**Ieșire**
+```
+97
+```
+**Explicație:** Suma maximă pe care o poate obține Gigel este 97 = 3*5 + (−2)*(−5) + 5*8 + (−1)*(−4) + 4*7.
