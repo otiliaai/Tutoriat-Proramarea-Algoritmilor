@@ -134,7 +134,7 @@ B = [7, 8, −5, 2, −4, −1, 5]
 ```
 97
 ```
-**Explicație:** Suma maximă pe care o poate obține Gigel este  97 = -2 * -5 + -1 * -4 + 3 * 8 + 4 * 7 + 5 * 5
+**Explicație:** Suma maximă pe care o poate obține Gigel este  97 = -2 * -5 + -1 * -4 + 5 * 8 + 4 * 7 + 3 * 5
 
 ------------------------------------------------------------------------
 
