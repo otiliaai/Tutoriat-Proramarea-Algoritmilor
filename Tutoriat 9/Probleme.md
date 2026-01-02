@@ -2,7 +2,6 @@
 
 **Complexitatea maximă a soluției:** `O(n²)`
 
----
 
 Pentru două cuvinte `x` și `y`, formate doar din litere mici ale alfabetului englez, spunem că **x este în relație cu y** dacă **ultima literă din x** este **alăturată (consecutivă)** în alfabet cu **prima literă din y**.
 
@@ -11,9 +10,6 @@ Exemple:
 - litera `b` este alăturată literelor `a` și `c`
 - etc.
 
----
-
-## Cerință
 
 Se citesc de la tastatură:
 - un număr natural `n`
@@ -21,13 +17,9 @@ Se citesc de la tastatură:
 
 Cuvintele sunt date pe **o singură linie**, separate prin spații.
 
-### Obiectiv
-
 Să se elimine din șir **un număr minim de cuvinte**, astfel încât șirul rămas să respecte următoarea proprietate:
 
 > Orice cuvânt din șir, cu excepția ultimului, este în relație cu următorul cuvânt din șir.
-
-### Cerințe suplimentare
 
 1. Se vor afișa pe ecran **cuvintele eliminate**.
 2. Se va determina dacă **soluția optimă este unică**.
@@ -35,7 +27,6 @@ Să se elimine din șir **un număr minim de cuvinte**, astfel încât șirul r�
    - `solutia este unica`
    - `solutia nu este unica`
 
----
 
 ## Date de intrare
 
@@ -54,23 +45,14 @@ solutia nu este unica
 
 
 
+---
+
 
 # PROBLEMA 2
 
 **Complexitatea maximă a soluției:** `O(n²)`
 
----
-
 Să se determine un **subșir crescător de lungime maximă** al unui șir `t` format din `n` numere întregi.
-
----
-
-## Date de intrare
-
-- `n` – numărul de elemente
-- `t` – șirul de `n` numere întregi
-
----
 
 ### Date de intrare
 
@@ -86,11 +68,14 @@ Să se determine un **subșir crescător de lungime maximă** al unui șir `t` f
 
 ```
 
+
+---
+
+
+
 # PROBLEMA 3 
 
 **Complexitatea maximă a soluției:** `O(n²)`
-
----
 
 Martinel a terminat sesiunea de examene și și-a propus ca mâine să se uite cât mai mult la televizor. Pentru aceasta și-a făcut o listă cu `n` emisiuni pe care ar vrea să le vadă.
 
@@ -100,9 +85,6 @@ Pentru fiecare emisiune a notat:
 
 Martinel vrea să vadă o emisiune **de la început până la final**, fără întrerupere (deci fără a schimba postul în timpul emisiunii).
 
----
-
-## Cerință
 
 Scrieți un program Python care să îl ajute pe Martinel să aleagă o listă de emisiuni la care să se uite mâine astfel încât:
 
@@ -113,7 +95,6 @@ Programul va afișa:
 1. lista emisiunilor selectate (în formatul din exemplu), câte una pe linie
 2. dacă soluția optimă este **unică** sau **nu este unică**
 
----
 
 ## Date de intrare
 
@@ -135,11 +116,14 @@ solutia este unica
 ```
 
 
+---
+
+
+
 # PROBLEMA 4
 
 **Complexitatea maximă a soluției:** `O(n²)`
 
----
 
 Alice vrea să își schimbe parola la contul de email. Ea are:
 - un șir de caractere preferat `s` (format din caractere ASCII) de lungime `n`
@@ -151,9 +135,6 @@ Alice construiește o parolă **ștergând caractere** din șirul `s`, astfel î
 
 Alice dorește ca parola să fie **cel mai lung** șir care se poate obține astfel din `s`.
 
----
-
-## Cerință
 
 Scrieți un program Python care:
 1. citește șirul `s` și numărul `k`
@@ -163,7 +144,7 @@ Scrieți un program Python care:
    - `solutia optima este unica` sau
    - `solutia optima nu este unica`
 
----
+
 
 ## Date de intrare
 
@@ -182,11 +163,14 @@ solutia optima nu este unica
 
 ```
 
+---
+
+
+
 # PROBLEMA 5
 
 **Complexitatea maximă a soluției:** `O(mn)`
 
----
 
 Greiereșul vrea să fie harnic vara aceasta și să adune singur grăunțe pentru iarnă, fără să mai ceară de la furnici.
 
@@ -207,9 +191,6 @@ Greiereșul pornește din **colțul din dreapta sus** (celula `(1, n)`) și se p
 
 Se poate opri în **orice celulă de pe ultima linie**, unde își construiește adăpostul pentru iarnă.
 
----
-
-## Cerință
 
 Scrieți un program Python care:
 1. citește dimensiunile tablei `m`, `n` și valorile `cij`
@@ -218,7 +199,7 @@ Scrieți un program Python care:
    - numărul maxim de grăunțe obținute pe traseu
    - traseul (lista coordonatelor celulelor parcurse), ca în exemplu
 
----
+
 
 ## Date de intrare
 
@@ -243,11 +224,13 @@ maxim 20 graunte pe traseul
 4 2
 ```
 
-# PROBLEMA 6
 
 ---
 
-## Enunțul problemei
+
+
+# PROBLEMA 6
+
 
 Schiorel a urcat cu telecabina până în vârful stațiunii și își dorește să ajungă **cât mai obosit** la una dintre cabanele stațiunii, ca să se poată hidrata cât mai intens.
 
@@ -273,7 +256,6 @@ Scrieți un program Python care:
    - valoarea maximă a oboselii
    - traseul ales (coordonatele celulelor parcurse), câte una pe linie
 
----
 
 ## Date de intrare
 
@@ -321,6 +303,10 @@ Gradul de oboseala maxim 31
 2 3
 
 ```
+
+---
+
+
 
 
 
