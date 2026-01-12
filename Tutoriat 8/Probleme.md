@@ -61,7 +61,7 @@ Programul va afișa pe ecran două numere, `k` `p`, separate printr-un spațiu, 
 ```
 3 5
 ```
-**Explicație:** Cu suma dată Moș Crăciun va cumpăra trei cadouri, cele cu prețurile `2` `4` `3`. Mai are nevoie de încă `5` (bani) ppentru a putea cumăra și cadoul cu prețul `6`.
+**Explicație:** Cu suma dată Moș Crăciun va cumpăra trei cadouri, cele cu prețurile `2` `4` `3`. Mai are nevoie de încă `5` (bani) pentru a putea cumăra și cadoul cu prețul `6`.
 
 
 ------------------------------------------------------------------------
@@ -134,7 +134,7 @@ B = [7, 8, −5, 2, −4, −1, 5]
 ```
 97
 ```
-**Explicație:** Suma maximă pe care o poate obține Gigel este 97 = 3*5 + (−2)*(−5) + 5*8 + (−1)*(−4) + 4*7.
+**Explicație:** Suma maximă pe care o poate obține Gigel este  97 = -2 * -5 + -1 * -4 + 5 * 8 + 4 * 7 + 3 * 5
 
 ------------------------------------------------------------------------
 

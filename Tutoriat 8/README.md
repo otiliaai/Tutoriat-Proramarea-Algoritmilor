@@ -37,11 +37,21 @@ Dacă vezi cuvinte ca:
 Formal:
 > Cauți o submulțime `S ⊆ A` care optimizează o funcție obiectiv (min/max).
 
+*functia obiectiv - criteriul matematic prin care măsurăm cât de "bună" este o soluție  => este formula pe care încercăm să o maximizăm (profit, număr de activități) sau să o minimizăm (cost, timp, distanță)
+
+
+
+| Problema | Scopul (Min/Max) | Funcția Obiectiv (Ce măsurăm exact) |
+| :--- | :---: | :--- |
+| **Rucsacul Fracționar** | **Maximizare** | **Câștigul total:** $C(X) = \sum c_i x_i$ <br> *(unde c_i este câștigul și x_i este fracțiunea luată)* |
+| **Planificarea Spectacolelor** <br> *(o singură sală)* | **Maximizare** | **Cardinalul submulțimii:** Numărul total de spectacole compatibile care pot fi planificate fără suprapuneri. |
+| **Minimizarea Timpului de Așteptare** | **Minimizare** | **Timpul mediu de așteptare:** $M = \frac{\sum a_i}{n}$ <br> *(unde a_i este timpul de așteptare al persoanei i)* |
+| **Planificarea Spectacolelor** <br> *(minim de săli)* | **Minimizare** | **Numărul de resurse:** Numărul minim de săli necesare astfel încât să nu existe suprapuneri în nicio sală. |
+| **Submulțime de sumă maximă** | **Maximizare** | **Suma elementelor:** $f(S) = \sum_{x \in S} x$ <br> *(pentru o submulțime S(A)*  |
 ---
 
 ### Pasul 2 – Propune o regulă Greedy
 
-Gândește o regulă simplă.
 
 De obicei implică:
 - sortare
