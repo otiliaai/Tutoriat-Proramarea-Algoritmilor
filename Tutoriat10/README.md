@@ -92,7 +92,7 @@ T(n) = \Theta(n)
 
 ------ 
 
-## SUBIECT COLCVIU(2025)
+## SUBIECT COLCVIU 1
 
 ---
 
@@ -183,5 +183,95 @@ Dacă autorul nu există, funcția returnează o listă vidă.
 
 ---
 
+
+
+## SUBIECT COLOCVIU 2 (2025)
+
+
+---
+
+## Subiectul 1 – Fișiere și matrice 
+
+### a) Citirea matricei din fișier
+- Se citește fișierul `matrice.in`.
+- Fiecare linie conține elementele unei linii din matrice, separate prin spațiu.
+- Dacă liniile nu au același număr de elemente, funcția returnează `None`.
+
+**Idee simplă:**
+- citim linie cu linie
+- transformăm fiecare linie în listă de numere
+- verificăm dacă toate liniile au aceeași lungime
+
+---
+
+### b) Funcția `multimi`
+- Primește:
+  - o matrice
+  - indici de linii (număr variabil de parametri)
+- Pentru fiecare linie:
+  - construim mulțimea numerelor **negative**
+  - construim mulțimea numerelor **pozitive** cu prima cifră egală cu ultima
+- Returnăm:
+  - **intersecția** numerelor negative
+  - **reuniunea** numerelor pozitive (distincte)
+
+---
+
+### c) Prelucrarea fișierului
+- Se folosesc funcțiile de la a) și b)
+- Se afișează:
+  - numerele pozitive cu prima cifră egală cu ultima din **ultimele 3 linii**, ordonate crescător
+  - numărul de elemente negative comune **primei și ultimei linii**
+
+---
+
+## Subiectul 2 – Șiruri de caractere 
+
+### a) Funcția `modifica_prefix(x, y, prop)`
+- Pentru fiecare cuvânt din propoziție:
+  - dacă începe cu `x`, prefixul `x` este înlocuit cu `y`
+- Returnează:
+  - propoziția modificată
+  - numărul de cuvinte modificate
+
+**Idee simplă:**
+- împărțim propoziția în cuvinte (`split`)
+- verificăm `startswith(x)`
+- reconstruim propoziția
+
+---
+
+### b) Funcția `poz_max`
+- Primește o listă de numere
+- Returnează pozițiile (numerotate de la 1) unde apare valoarea maximă
+
+---
+
+### c) Fișierele `propozitii.in` → `propozitii_modificate.out`
+- Se citesc cuvintele `a` și `b`
+- Se modifică propozițiile folosind `modifica_prefix`
+- Se determină propozițiile cu cele mai multe modificări
+- Se afișează indicii acestora folosind `poz_max`
+
+---
+
+## Subiectul 3 – Structuri de date (bănci și depozite) 
+
+### a) Memorarea datelor
+- Datele din `depozite.in` sunt memorate într-o **singură structură de date**
+- Structura permite:
+  - acces rapid la depozite după bancă
+  - grupare după monedă
+
+**Structură simplă (exemplu):**
+```text
+{
+  "Banca Transilvania": {
+      "LEI": [ (suma, dobanda, perioada), ... ],
+      "EURO": [ ... ]
+  },
+  ...
+}
+```
 
 
