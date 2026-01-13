@@ -60,7 +60,7 @@
        * Coduri PIN cu restricții
        * Descompunerea unui număr ca sumă
      * Analiza complexității algoritmilor Backtracking.
-10. [Tutoriat 10: Pregătire Examen și Colocviu](Tutoriat%210)
+10. [Tutoriat 10: Pregătire Examen și Colocviu](Tutoriat10)
     * Structura subiectelor de **examen**:
       * Subiect obligatoriu (funcții, liste, dicționare, complexitate)
       * Subiecte la alegere: Greedy, Programare Dinamică, Backtracking
