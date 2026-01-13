@@ -39,7 +39,7 @@ casa apa bun bine fila dop orar
 ## Date de iesire
 
 ```text
-casa bun fila
+apa bun fila
 solutia nu este unica
 ```
 
