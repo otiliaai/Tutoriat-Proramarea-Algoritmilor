@@ -48,45 +48,7 @@ prefix_5 = [
 ]
 
 
-# c) Complexitatea functiei recursive f(s)
 ## c) Analiza complexității folosind Teorema Master
 
-Se consideră funcția recursivă `f(s)`, unde `n = len(s)`.
 
-### Observații
-- La fiecare apel recursiv se face **un singur apel** pe aproximativ **jumătate din șir**:
-  - `f(s[m+1:])` sau `f(s[:m+1])` → dimensiune ≈ `n/2`
-- În fiecare apel există operații cu **cost liniar O(n)**:
-  - `replace(...)` (parcurge șirul)
-  - slicing (`s[:...]`, `s[...]`)
-  - concatenare de șiruri
-
-### Recurența
-\[
-T(n) = T(n/2) + O(n)
-\]
-
-### Aplicarea Teoremei Master
-- \(a = 1\)
-- \(b = 2\)
-- \(f(n) = \Theta(n)\)
-
-Calculăm:
-\[
-n^{\log_b a} = n^{\log_2 1} = n^0 = 1
-\]
-
-Deoarece:
-\[
-f(n) = \Theta(n) \gg 1
-\]
-
-ne aflăm în **cazul 3 al Teoremei Master**.
-
-### Concluzie
-\[
-T(n) = \Theta(n)
-\]
-
-**Complexitatea temporală (worst-case) este liniară.**
 
