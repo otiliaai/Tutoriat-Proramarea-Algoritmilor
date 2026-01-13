@@ -1,4 +1,4 @@
-# SUBIECTUL 1
+# SUBIECTUL 1 – Programarea Algoritmilor Examen
 
 # a) Functia consoane_comune
 def consoane_comune(*args):
@@ -8,40 +8,85 @@ def consoane_comune(*args):
     """
     def get_consoane(cuvant):
         vocale = "aeiouAEIOU"
-        # Set comprehension pentru a obtine consoanele unice
-        consoane = {c for c in cuvant if c.isalpha() and c not in vocale}
-        # Returnam un tuple sortat pentru a putea fi folosit ca cheie in dictionar
-        return tuple(sorted(list(consoane)))
+        # Multimea consoanelor distincte din cuvant
+        # tuple - este hashable(il putem folosi ca si cheie)
+        return tuple(sorted({c for c in cuvant if c.isalpha() and c not in vocale}))
 
     frecventa = {}
-    
+
     for cuv in args:
         cheie = get_consoane(cuv)
-        if cheie in frecventa:
-            frecventa[cheie] += 1
-        else:
-            frecventa[cheie] = 1
-            
-    # Returnam maximul din valori. Daca lista e goala, returnam 0.
-    if not frecventa:
-        return 0
-    return max(frecventa.values())
+        frecventa[cheie] = frecventa.get(cheie, 0) + 1
 
-# b) List comprehension prefix_5
-prefix_5 = [x for x in lista_numere if x % 5 != 0 and all(int(str(x)[:i]) % 5 != 0 for i in range(1, len(str(x))))]
+    # Daca nu exista cuvinte, returnam 0
+    return max(frecventa.values(), default=0)
+
+# varainta 2: cu o singura functie
+def consoane_comune(*args):
+    vocale = "aeiouAEIOU"
+    frecventa = {}
+
+    for cuv in args:
+        # multimea consoanelor din cuvant
+        consoane = {c for c in cuv if c.isalpha() and c not in vocale}
+
+        # transformam in tuple sortat pentru a putea fi cheie de dictionar
+        cheie = tuple(sorted(consoane))
+
+        frecventa[cheie] = frecventa.get(cheie, 0) + 1
+
+    return max(frecventa.values(), default=0)
+
+
+
+# b) List comprehension pentru prefix_5
+# prefix_5 contine numerele care nu sunt multipli de 5
+# si niciun prefix al lor nu este multiplu de 5
+prefix_5 = [
+    x for x in lista_numere
+    if x % 5 != 0 and all(int(str(x)[:i]) % 5 != 0 for i in range(1, len(str(x))))
+]
+
 
 # c) Complexitatea functiei recursive f(s)
-"""
-RASPUNS PENTRU C:
-Analiza complexității:
-Funcția f(s) împarte problema în subprobleme de dimensiune n/2 (unde n este lungimea șirului).
-În fiecare apel recursiv, se fac următoarele operații:
-1. Calculul mijlocului și verificări (timp constant O(1)).
-2. Slicing (felierea șirului): s[:m+1] sau s[m+1:]. În Python, copierea unei felii de șir de lungime k costă O(k). Aici costă O(n).
-3. Un singur apel recursiv pe jumătate din șir (fie pe stânga, fie pe dreapta, în funcție de `if c in "aeiou"`).
+## c) Analiza complexității folosind Teorema Master
 
-Recurența este: T(n) = T(n/2) + O(n)
-Aceasta este o serie geometrică: n + n/2 + n/4 + ... care converge la 2n.
+Se consideră funcția recursivă `f(s)`, unde `n = len(s)`.
 
-Complexitatea maximă (Worst Case): O(n) - Liniară.
-"""
+### Observații
+- La fiecare apel recursiv se face **un singur apel** pe aproximativ **jumătate din șir**:
+  - `f(s[m+1:])` sau `f(s[:m+1])` → dimensiune ≈ `n/2`
+- În fiecare apel există operații cu **cost liniar O(n)**:
+  - `replace(...)` (parcurge șirul)
+  - slicing (`s[:...]`, `s[...]`)
+  - concatenare de șiruri
+
+### Recurența
+\[
+T(n) = T(n/2) + O(n)
+\]
+
+### Aplicarea Teoremei Master
+- \(a = 1\)
+- \(b = 2\)
+- \(f(n) = \Theta(n)\)
+
+Calculăm:
+\[
+n^{\log_b a} = n^{\log_2 1} = n^0 = 1
+\]
+
+Deoarece:
+\[
+f(n) = \Theta(n) \gg 1
+\]
+
+ne aflăm în **cazul 3 al Teoremei Master**.
+
+### Concluzie
+\[
+T(n) = \Theta(n)
+\]
+
+**Complexitatea temporală (worst-case) este liniară.**
+
