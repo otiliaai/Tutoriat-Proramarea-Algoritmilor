@@ -93,3 +93,95 @@ T(n) = \Theta(n)
 ------ 
 
 ## SUBIECT COLCVIU(2025)
+
+---
+
+### 1. Subiectul I – Lucrul cu matrice și mulțimi – `colocviu_1.py`
+
+#### a) Funcția `citire_matrice`
+- **Descriere:** Primește ca parametru numele unui fișier care conține elementele unei matrice.
+- **Comportament:**
+  - Citește matricea din fișier (elemente separate prin spațiu).
+  - Dacă numărul de elemente diferă de la o linie la alta, funcția returnează `None`.
+- **Returnează:** matricea citită sau `None`.
+
+#### b) Funcția `multimi`
+- **Parametri:**
+  - o matrice
+  - un număr variabil de indici ai liniilor
+- **Pentru fiecare linie selectată:**
+  - se construiește mulțimea numerelor **negative**
+  - se construiește mulțimea numerelor **pozitive** care au **prima cifră egală cu ultima**
+- **Returnează:**
+  - intersecția mulțimilor numerelor negative
+  - reuniunea mulțimilor numerelor pozitive (elemente distincte)
+
+#### c) Prelucrare fișier `matrice.in`
+- Se citește matricea folosind `citire_matrice`.
+- Se folosesc apeluri utile ale funcției `multimi`.
+- Se afișează:
+  - numerele pozitive cu prima cifră egală cu ultima de pe **ultimele 3 linii**, ordonate crescător
+  - numărul de elemente negative comune **primei și ultimei linii**
+
+---
+
+### 2. Subiectul II – Șiruri de caractere și liste – `colocviu_2.py`
+
+#### a) Funcția `modifica_prefix`
+- **Parametri:** `x`, `y`, `prop`
+- **Descriere:**
+  - În fiecare cuvânt din propoziție care începe cu `x`, prefixul `x` este înlocuit cu `y`.
+- **Returnează:**
+  - propoziția modificată
+  - numărul de cuvinte modificate
+
+#### b) Funcția `poz_max`
+- **Parametru:** listă de numere naturale
+- **Returnează:** lista pozițiilor (numerotate de la 1) unde apare valoarea maximă.
+
+#### c) Prelucrare fișier `propozitii.in`
+- Se citesc două cuvinte `a` și `b` de la tastatură.
+- Se creează fișierul `propozitii_modificate.out` folosind `modifica_prefix`.
+- Se determină propozițiile cu cele mai multe modificări.
+- Se afișează indicii acestora folosind funcția `poz_max`.
+
+---
+
+### 3. Subiectul III – Structuri de date (autori și cărți) – `colocviu_3.py`
+
+#### a) Memorarea datelor
+- Datele din fișierul `autori.in` sunt memorate într-o **singură structură de date** (dicționar).
+- Structura permite:
+  - acces rapid la autor după cod
+  - acces rapid la cărți după codul autorului
+
+#### b) Funcția `sterge_carte`
+- **Parametri:**
+  - structura de date
+  - codul unei cărți
+- **Comportament:**
+  - șterge cartea dacă există
+  - returnează numele autorului sau `None`
+- **Afișare:**
+  - mesaj corespunzător existenței cărții
+  - structura rămasă după ștergere
+
+#### c) Funcția `carti_autor`
+- **Parametri:**
+  - structura de date
+  - codul unui autor
+- **Returnează:**
+  - numele autorului
+  - lista cărților sale, sub forma:
+    `(titlu, an_aparitie, nr_pagini)`
+- **Sortare:**
+  - crescător după an
+  - descrescător după numărul de pagini
+  - crescător după titlu
+
+Dacă autorul nu există, funcția returnează o listă vidă.
+
+---
+
+
+
